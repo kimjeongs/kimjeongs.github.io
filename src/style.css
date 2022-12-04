@@ -1,0 +1,97 @@
+html,body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.cont {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+}
+.clock {
+	margin: 20px 0 60px;
+	color: #fff;
+	font-size: 60px;
+	font-weight: bold;
+}
+.geo-weather {
+	color: #fff;
+	font-size: 25px;
+}
+.login-form {
+	display: flex;
+}
+.login-form input[type="submit"] {
+	margin-left: 5px;
+	font-weight: bold;
+	border: 3px solid #fff;;
+	font-size: 15px;
+}
+.greeting {
+	margin: 0;
+	color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+.todo-form {
+	margin-top: 50px;
+}
+.todo-form input {
+	width: 400px;
+}
+input {
+	height: 36px;
+	padding: 3px 10px;
+	border: none;
+	border-bottom: 3px solid #fff;
+	background: none;
+	background-color: rgba(255,255,255,.5);
+	outline: none;
+	color: black;
+	font-size: 20px;
+}
+input::placeholder {
+	color: black;
+	font-size: 20px;
+}
+.todoList {
+	width: 400px;
+	padding: 0;
+	margin: 0;
+}
+.todoList li {
+	display: flex;
+	justify-content: space-between;
+	padding: 3px 10px;
+	margin-top: 30px;
+	background-color: rgba(255,255,255,.5);
+	font-size: 25px;
+	list-style: none;
+	text-align: left;
+}
+.todoList li + li {
+	margin-top: 10px;
+}
+.todoList button {
+	width: 30px;
+	height: 30px;
+	font-size: 20px;
+	border: none;
+	background: none;
+}
+.hidden { 
+	display: none; 
+}
