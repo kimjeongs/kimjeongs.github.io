@@ -1,0 +1,51 @@
+<svg id="symbol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="121.397" height="126.416" viewBox="0 0 121.397 126.416">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_13" data-name="사각형 13" width="121.397" height="126.416"/>
+    </clipPath>
+  </defs>
+  <line id="선_3" data-name="선 3" y1="59.446" transform="translate(59.871 3.01)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_4" data-name="선 4" y1="48.093" x2="34.941" transform="translate(59.871 14.363)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_5" data-name="선 5" y1="18.369" x2="56.536" transform="translate(59.871 44.086)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_6" data-name="선 6" x2="56.536" y2="18.369" transform="translate(59.871 62.455)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_7" data-name="선 7" x2="34.941" y2="48.093" transform="translate(59.871 62.455)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_8" data-name="선 8" y2="59.446" transform="translate(59.871 62.455)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_9" data-name="선 9" x1="34.941" y2="48.093" transform="translate(24.93 62.455)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_10" data-name="선 10" x1="56.536" y2="18.369" transform="translate(3.336 62.455)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_11" data-name="선 11" x1="56.536" y1="18.369" transform="translate(3.336 44.086)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <line id="선_12" data-name="선 12" x1="34.941" y1="48.093" transform="translate(24.93 14.363)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.551"/>
+  <g id="그룹_4" data-name="그룹 4" transform="translate(0 0)">
+    <g id="그룹_3" data-name="그룹 3" clip-path="url(#clip-path)">
+      <path id="패스_11" data-name="패스 11" d="M48.635,3.763A3.762,3.762,0,1,1,44.872,0a3.764,3.764,0,0,1,3.763,3.763" transform="translate(14.999 0)"/>
+      <path id="패스_12" data-name="패스 12" d="M48.635,90.873a3.762,3.762,0,1,1-3.763-3.763,3.763,3.763,0,0,1,3.763,3.763" transform="translate(14.999 31.781)"/>
+      <path id="패스_13" data-name="패스 13" d="M88.292,37.252a3.762,3.762,0,1,1,2.5-4.7,3.762,3.762,0,0,1-2.5,4.7" transform="translate(30.439 10.905)"/>
+      <path id="패스_14" data-name="패스 14" d="M18.715,83.785a1.97,1.97,0,1,1,1.31-2.459,1.97,1.97,0,0,1-1.31,2.459" transform="translate(5.899 29.162)"/>
+      <path id="패스_15" data-name="패스 15" d="M70.54,13.215a1.97,1.97,0,1,1,1.31-2.459,1.971,1.971,0,0,1-1.31,2.459" transform="translate(24.807 3.415)"/>
+      <path id="패스_16" data-name="패스 16" d="M19.817,13.215a1.97,1.97,0,1,1,1.31-2.459,1.971,1.971,0,0,1-1.31,2.459" transform="translate(6.302 3.415)"/>
+      <path id="패스_17" data-name="패스 17" d="M70.54,83.785a1.97,1.97,0,1,1,1.31-2.459,1.97,1.97,0,0,1-1.31,2.459" transform="translate(24.807 29.162)"/>
+      <path id="패스_18" data-name="패스 18" d="M3.278,34.166a1.97,1.97,0,1,1,1.309-2.459,1.971,1.971,0,0,1-1.309,2.459" transform="translate(0.267 11.059)"/>
+      <path id="패스_19" data-name="패스 19" d="M4.86,64.172a3.762,3.762,0,1,1,2.5-4.7,3.762,3.762,0,0,1-2.5,4.7" transform="translate(0 20.726)"/>
+      <path id="패스_20" data-name="패스 20" d="M87.167,63.723a3.762,3.762,0,1,1,2.5-4.7,3.762,3.762,0,0,1-2.5,4.7" transform="translate(30.029 20.563)"/>
+      <line id="선_13" data-name="선 13" y1="18.802" x2="28.168" transform="translate(59.554 44.194)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_14" data-name="선 14" x2="33.84" y2="1.346" transform="translate(59.554 62.996)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_15" data-name="선 15" x2="26.586" y2="20.979" transform="translate(59.554 62.996)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_16" data-name="선 16" x2="9.177" y2="32.599" transform="translate(59.554 62.996)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_17" data-name="선 17" x1="11.736" y2="31.767" transform="translate(47.818 62.996)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_18" data-name="선 18" x1="28.168" y2="18.802" transform="translate(31.386 62.996)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_19" data-name="선 19" x1="33.84" y1="1.346" transform="translate(25.714 61.651)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_20" data-name="선 20" x1="26.586" y1="20.979" transform="translate(32.968 42.017)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_21" data-name="선 21" x1="9.177" y1="32.599" transform="translate(50.377 30.397)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <line id="선_22" data-name="선 22" y1="31.767" x2="11.736" transform="translate(59.554 31.23)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.314"/>
+      <path id="패스_21" data-name="패스 21" d="M65.774,34.912a2.143,2.143,0,1,1,.592-2.973,2.144,2.144,0,0,1-.592,2.973" transform="translate(22.781 11.304)"/>
+      <path id="패스_22" data-name="패스 22" d="M24.5,62.463a2.143,2.143,0,1,1,.592-2.973,2.143,2.143,0,0,1-.592,2.973" transform="translate(7.722 21.356)"/>
+      <path id="패스_23" data-name="패스 23" d="M62.449,64.294a2.143,2.143,0,1,1,3.016-.3,2.143,2.143,0,0,1-3.016.3" transform="translate(22.497 22.07)"/>
+      <path id="패스_24" data-name="패스 24" d="M18.044,46.149a1.122,1.122,0,1,1,1.579-.157,1.122,1.122,0,0,1-1.579.157" transform="translate(6.433 16.111)"/>
+      <path id="패스_25" data-name="패스 25" d="M67.875,48.386a1.122,1.122,0,1,1,1.579-.157,1.121,1.121,0,0,1-1.579.157" transform="translate(24.613 16.927)"/>
+      <path id="패스_26" data-name="패스 26" d="M51.832,24.352a1.122,1.122,0,1,1,1.579-.157,1.122,1.122,0,0,1-1.579.157" transform="translate(18.76 8.158)"/>
+      <path id="패스_27" data-name="패스 27" d="M34.436,70.706a1.122,1.122,0,1,1,1.579-.157,1.122,1.122,0,0,1-1.579.157" transform="translate(12.414 25.07)"/>
+      <path id="패스_28" data-name="패스 28" d="M36.673,23.141a1.122,1.122,0,1,1,1.579-.157,1.122,1.122,0,0,1-1.579.157" transform="translate(13.23 7.717)"/>
+      <path id="패스_29" data-name="패스 29" d="M23.305,33.276a2.143,2.143,0,1,1,3.016-.3,2.143,2.143,0,0,1-3.016.3" transform="translate(8.216 10.753)"/>
+      <path id="패스_30" data-name="패스 30" d="M49.55,72.133a2.143,2.143,0,1,1,3.016-.3,2.144,2.144,0,0,1-3.016.3" transform="translate(17.791 24.93)"/>
+    </g>
+  </g>
+</svg>
