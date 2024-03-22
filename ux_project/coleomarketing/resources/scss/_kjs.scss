@@ -27,10 +27,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
   background: #d0ff00;
-  transform: rotate(45deg);
   pointer-events: none;
+  z-index: 100000;
 }
 .follower  {
   width: 60px;
@@ -38,12 +37,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
-  
   pointer-events: none;
   background: white;
   border-radius: 50%;
-  mix-blend-mode: difference;  
+  mix-blend-mode: difference; 
+  z-index: 100000;
 }
 .grow {
   background: none;
@@ -64,14 +62,6 @@
     width: 100%;
     .top_menu {
       display: none;
-    }
-    .tit {
-      &.active {
-        opacity: 1;
-      }
-    }
-    .btn_menu {
-      opacity: 1;
     }
   }
   .top_menu {
@@ -99,9 +89,8 @@
     padding-left: 40px;
     font-size: 24px;
     font-weight: 400;
-    color: #fff;
+    color: #000;
     z-index: 9999;
-    opacity: 0;
     transition: 0.3s;
   }
   .btn_menu {
@@ -112,29 +101,26 @@
     right: 40px;
     gap: 8px;
     background:none;
-    opacity: 0;
     transition: 0.3s;
     z-index: 9999;
-    &.show {
-      opacity: 1;
-    }
     &.active {
       span {
+        background: #F8F8F4;
         &:nth-child(1) {
-          transform: translateY(10px) rotate(-45deg);
+          transform: translateY(5px) rotate(-45deg);
         }
         &:nth-child(2) {
-          opacity: 0;
+          display: none;
         }
         &:nth-child(3) {
-          transform: translateY(-10px) rotate(45deg);
+          transform: translateY(-5px) rotate(45deg);
         }
       }
     }
     span {
       height: 2px;
       width: 50px;
-      background-color: #F8F8F4;
+      background-color: #000;
       transition: 0.3s;
     }
   }
@@ -158,18 +144,25 @@
             a {
               position: relative;
               &::before {
-                position: absolute;
                 width: 100%;
-                height: 2px;
-                background: #fff;
-                content: '';
               }
             }
           }
           a {
-            display: block;
+            position: relative;
+            display: inline-block;
             color: #fff;
             font-size: 80px;
+            &::before {
+              position: absolute;
+              left: 0;
+              top: 45%;
+              width: 0;
+              height: 2px;
+              background: #fff;
+              transition: 0.3s;
+              content: '';
+            }
             span {
               @include en_sl;
               display: inline-block;
@@ -264,9 +257,6 @@ section {
       font-size: 80px;
       text-align: center;
       mix-blend-mode:hard-light;
-      &.off {
-        opacity: 0;
-      }
       &.txt2 {
         opacity: 0;
       }
@@ -291,4 +281,89 @@ section {
       object-fit: cover;
     }
   }
+}
+
+
+.sec03 {
+  @include flexCenter;
+  border: 10px solid red;
+  height: auto;
+  .inner {
+    width: 100%;
+    padding-top: 20.94vw;
+    padding-bottom: 8.13vw;
+    background-color: #F8F8F4;
+  }
+  .flow_txt {
+    @include flexCenter;
+    flex-direction: column;
+    >strong {
+      @include en;
+      display: block;
+      font-size: 5.83vw;
+      font-weight: 100;
+      color: #000;
+      span {
+        @include en_sl;
+        font-size: 6.25vw;
+      }
+    }
+    >div {
+      @include en_sl;
+      margin: 30px 0 0 200px;
+      font-size: 2.45vw;
+      color: #000;
+    }
+  }
+  .works_noti {
+    margin-top:200px;
+    text-align: center;
+    p {
+      margin-top: 50px;
+      font-size: 1.61vw;
+      line-height: 2.08vw;
+      color: #000000;
+      text-align: center;
+    }
+    .btn_round {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 50px;
+      text-align: center;
+      font-size: 30px;
+      background: #F8F8F4;
+      color: #000000;
+      border: 0.07vw solid #000000;
+      border-radius: 50px;
+      transition: all .5s;
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 0.75vw;
+        height: 1.03vw;
+        margin-left: 10px;
+        background: url('../../resources/images/ico_arr_more.svg') no-repeat center center;
+        background-size: 100% 100%;
+      }
+      &:hover {
+        color: #fff;
+        background: #000;
+        &::after {
+          background-color: #ccc;
+          -webkit-mask-image: url('../../resources/images/ico_arr_more.svg') ;
+          mask-image: url('../../resources/images/ico_arr_more.svg') ;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          background-image: none;
+        }
+      }
+    }
+  }
+}
+
+
+.sec04 {
+  border: 10px solid blue;
 }
