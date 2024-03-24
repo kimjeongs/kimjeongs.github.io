@@ -237,7 +237,100 @@ $(function() {
 
   // sec03 ----------------------------------------------------------------
   const sec03 = $('.sec03');
-  gsap.timeline()
+  
+  const ani5 = gsap.timeline();
+  ani5.to(".sec03 .t1", {xPercent:-200,duration:10},"text")
+      .to(".sec03 .t2", {xPercent:200,duration:10},"text")
+      .to(".sec03 .t3", {xPercent:-200,duration:12},"text")
+      .to(".sec03 .t4", {xPercent:-600,duration:13},"text")
+      .to(".sec03 .works_noti .symbol", {rotation:-360, duration:10},"text")
+
+  ScrollTrigger.create({
+    animation:ani5,
+    trigger:sec03,
+    start: "top top",
+    end:"+=3000",
+    scrub: 1,
+    markers: false,
+    anticipatePin: 1
+  })
+
+
+  // sec04 ----------------------------------------------------------------
+  gsap.to(".sec04 .fix", {
+    scrollTrigger: {
+      trigger:".sec04 .fix",
+      scrub: true,
+      pin: true,
+      pinSpacing:false,
+      anticipatePin: 1,
+      markers:false,
+    },
+  })
+
+
+  // sec05 ----------------------------------------------------------------
+  let slideWrap = $('.sec05 .slide_wrap');
+  let slideItems = gsap.utils.toArray('.sec05 .slide_wrap li');
+
+  gsap.to(slideWrap, {
+    xPercent:-100*(slideItems.length -1),
+    ease:"none",
+    scrollTrigger: {
+      trigger: slideWrap,
+      start:"top top",
+      // end: () =>  "+=" + (slideWrap.offsetWidth - innerWidth),
+      pin: true,
+      scrub: 1,
+      snap: {
+          snapTo: 1 / (slideItems.length - 1),
+          inertia: false,
+          duration: {min: 0.1, max: 0.1}
+      },
+      invalidateOnRefresh: true,
+      anticipatePin: 1,
+      markers:false,
+    }
+  })
+
+
+  // sec06 ----------------------------------------------------------------
+  let sec06 = $('.sec06'),
+      fixWrap = $('.sec06 .fix_txt'),
+      fixTxt = $('.sec06 .fix_txt .txt');
+
+  const moveTxt = gsap.timeline();
+  moveTxt.from(".sec06 .t1", {xPercent:-100,duration:1},"m1")
+      .from(".sec06 .t2", {xPercent:100,duration:1},"m1")
+      .to(fixTxt,{color:"#fff"},3)
+      .to(sec06,{background:"#000"},3)
+
+  ScrollTrigger.create({
+    animation:moveTxt,
+    trigger:fixWrap,
+    top:"top top",
+    end:"30% top",
+    scrub:1,
+    markers: false,
+  })    
+
+  gsap.to(fixWrap, {
+    scrollTrigger: {
+      trigger:fixWrap,
+      end:"+=4000",
+      scrub: true,
+      pin: true,
+      pinSpacing:false,
+      anticipatePin: 1,
+      markers:true,
+    },
+  })
+
+  
+
+
+
+
 
 
 

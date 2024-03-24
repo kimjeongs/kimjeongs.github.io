@@ -9,6 +9,14 @@
 	font-family: $font-silk;
 }
 
+@mixin flex {
+	display: -webkit-box;
+	display: flex;
+	justify-content:flex-start;
+	-webkit-box-align: flex-start;
+	align-items: flex-start;
+}
+
 @mixin flexCenter {
   display: -webkit-box;
   display: flex;
