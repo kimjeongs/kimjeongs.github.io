@@ -317,7 +317,7 @@ $(function() {
   gsap.to(fixWrap, {
     scrollTrigger: {
       trigger:fixWrap,
-      end:"+=4000",
+      end:"+=2000",
       scrub: true,
       pin: true,
       pinSpacing:false,
