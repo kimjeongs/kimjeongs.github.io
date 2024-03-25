@@ -1,0 +1,120 @@
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.main_top {
+  .visual_list {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    li {
+      position: absolute;
+      width: 45%;
+      height: 100%;
+      transition: 0.7s;
+      &:hover {
+        .wrap {
+          .txt_box {
+            left: 25%;
+            .desc {
+              opacity: 1;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+      &.vs01 {
+        clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
+        top:0;
+        left: -6%;
+        &:hover {
+          .wrap {
+            img {
+              transform: translateX(3%) scale(1.1);
+            }
+            .txt_box {
+              left: 25%;
+            }
+          }
+        }
+        .wrap {
+          .txt_box {
+            left: 20%;
+          }
+        }
+      }
+      &.vs02 {
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        z-index: 1;
+        &:hover {
+          width: 52%;
+          .wrap {
+            img {
+              transform: translateX(-3%) scale(1.1);
+            }
+            .txt_box {
+              left: 20%;
+            }
+          }
+        }
+
+      }
+      &.vs03 {
+        top:0;
+        right:-6%;
+        clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+        &:hover {
+          .wrap {
+            img {
+              transform: translateX(-3%) scale(1.1);
+            }
+            .txt_box {
+              left: 15%;
+            }
+          }
+        }
+      }
+      .wrap {
+        height: 100vh;
+        img {
+          transition: 0.7s;
+        }
+        .txt_box {
+          position: absolute;
+          left:10%;
+          bottom:5.5%;
+          color: #fff;
+          text-shadow: 1px 1px 1px rgba(31,31,31,0.2);
+          transition: 0.7s;
+          .desc {
+            margin-bottom: 40px;
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+            letter-spacing: -0.8px;
+            opacity: 0;
+            transition: 1s;
+          }
+          .name {
+            font-size: 1.8rem;
+            letter-spacing: -0.6px;
+            line-height: 2.5rem;
+            opacity: 0.8;
+          }
+          .tag {
+            margin-top: 5px;
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            line-height: 4rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

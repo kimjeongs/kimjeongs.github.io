@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="youtube" transform="translate(-20 -7)">
+    <rect id="base" width="40" height="40" transform="translate(20 7)" fill="none"/>
+    <g id="그룹_144" data-name="그룹 144" transform="translate(15.5 1)">
+      <path id="Vector" d="M26.25,30H8.75C3.5,30,0,26.25,0,20.625V9.375C0,3.75,3.5,0,8.75,0h17.5C31.5,0,35,3.75,35,9.375v11.25C35,26.25,31.5,30,26.25,30Z" transform="translate(7.5 11)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Vector-2" data-name="Vector" d="M3.15.477,7.525,3.1c1.575,1.05,1.575,2.625,0,3.675L3.15,9.4C1.4,10.452,0,9.577,0,7.652V2.4C0,.127,1.4-.573,3.15.477Z" transform="translate(20.8 21.164)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
