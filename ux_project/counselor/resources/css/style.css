@@ -2192,6 +2192,24 @@ img {
   vertical-align: top;
 }
 
+.main_top {
+  position: relative;
+}
+.main_top .drawing_logo {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.main_top .drawing_logo .logo {
+  width: auto;
+  height: auto;
+}
 .main_top .visual_list {
   position: relative;
   height: 100vh;
