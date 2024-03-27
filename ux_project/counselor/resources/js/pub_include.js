@@ -12,6 +12,9 @@ var include = {
   },
   styles: function () {
     document.write(
+      '<link rel="stylesheet" href="' + baseURL + '/css/swiper.min.css" type="text/css" />'
+    );
+    document.write(
       '<link rel="stylesheet" href="' + baseURL + '/css/style.css" type="text/css" />'
     );
   },
@@ -19,6 +22,9 @@ var include = {
     // library js
     document.write(
       '<script src="' + baseURL + '/js/jquery-3.6.0.min.js"></script>'
+    );
+    document.write(
+      '<script src="' + baseURL + '/js/swiper.min.js"></script>'
     );
     document.write(
       '<script src="' + baseURL + '/js/gsap.min.js"></script>'
