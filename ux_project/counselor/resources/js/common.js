@@ -26,7 +26,7 @@ $(function() {
     gsap.timeline({
       scrollTrigger :{
         trigger:item,
-        start:'-350 top',
+        start:'-500 top',
         toggleClass: {'targets':item, className:'active'},
         scrub:true,
         markers:false,
@@ -49,7 +49,8 @@ $(function() {
       },
     },
     scrollTrigger : {
-      trigger:".sec02"
+      trigger:".sec02",
+      start:"-300 top"
     }
   });
   
@@ -57,6 +58,7 @@ $(function() {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
+  //메인 video
   $(document).on('click','.videoPoster',function(e) {
     e.preventDefault();
     let poster = $(this);
@@ -72,6 +74,34 @@ $(function() {
     iframe.playVideo();
   }
 
+  //gnb
+  let header = $('#header'), 
+      gnbMenuWrap = $('.gnb_menu_wrap'),
+      gnbBtn = $('.btn_gnb'),
+      gnbMenu = gnbMenuWrap.find('.gnb > ul > li');
+
+  $(window).on('scroll',function(){
+    let scroll = $(this).scrollTop();
+    (scroll>0) ? $('#header .wrap').addClass('active') : $('#header .wrap').removeClass('active');
+  })    
+
+  gnbBtn.on('click',function() {
+    if(header.is('.active')) {
+      gnbMenuWrap.hide(0);
+      header.removeClass('active');
+      $('body').css('overflow','visible');
+    } else {
+      gnbMenuWrap.slideDown(300);
+      header.addClass('active');
+      $('body').css('overflow','hidden');
+    }
+  })
+
+  gnbMenu.on('mouseover',function () {
+    let idx = $(this).index()
+    $('.bg > li').removeClass('active');
+    $(this).parents(gnbMenuWrap).find('.bg > li').eq(idx).addClass('active');
+  })
 })
 
 

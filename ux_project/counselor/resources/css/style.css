@@ -2192,6 +2192,18 @@ img {
   vertical-align: top;
 }
 
+section {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+section.wide {
+  max-width: 100%;
+}
+section .wrap {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .main .top_wrap {
   position: relative;
 }
@@ -2333,10 +2345,10 @@ img {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-  justify-content: space-between;
-  -webkit-box-align: space-between;
+  justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
-  gap: 40px;
+  gap: 200px;
   padding-left: 10.26%;
 }
 .main .sec01 .desc > li + li {
@@ -2425,6 +2437,7 @@ img {
 .main .sec02 {
   padding: 150px 0 204px;
   background: linear-gradient(rgba(48, 48, 48, 0.8), rgba(48, 48, 48, 0.8)), url("../images/bg_counter.png") no-repeat center;
+  background-size: cover;
 }
 .main .sec02 .txt {
   font-size: 4.2rem;
@@ -2532,6 +2545,7 @@ img {
   -webkit-box-align: flex-start;
   align-items: flex-start;
   padding-top: 70px;
+  overflow: hidden;
 }
 .main .sec04 .flow_text .flow_wrap {
   white-space: nowrap;
@@ -2621,6 +2635,40 @@ img {
   transition: border-color 300ms;
 }
 
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+#header.active .wrap h1.logo a {
+  background-color: #fff;
+  -webkit-mask-image: url("../images/logo.svg");
+  mask-image: url("../images/logo.svg");
+  -webkit-mask-size: 332px auto;
+  mask-size: 332px auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-image: none;
+}
+#header.active .wrap .top_menu li:hover a {
+  color: #000;
+}
+#header.active .wrap .top_menu li a {
+  color: #fff;
+  border-color: #fff;
+}
+#header.active .wrap .top_menu li .hover_action span {
+  background: #fff;
+}
+#header.active .gnb_wrap .btn_gnb span {
+  transform: translate3d(0, -100%, 0);
+}
+#header.active .gnb_menu_wrap .gnb {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
 #header .wrap {
   display: -webkit-box;
   display: flex;
@@ -2628,16 +2676,31 @@ img {
   justify-content: space-between;
   -webkit-box-align: space-between;
   align-items: center;
+  position: relative;
   padding: 20px 102px 20px 32px;
 }
-#header .wrap h1.logo {
-  height: 48px;
+#header .wrap::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.3s;
+  content: "";
+}
+#header .wrap.active::before {
+  bottom: 0;
+  background: #fff;
+  opacity: 1;
 }
 #header .wrap h1.logo a {
   display: block;
-}
-#header .wrap h1.logo a img {
-  object-fit: contain;
+  width: 332px;
+  height: 48px;
+  background-image: url("../images/logo.svg");
+  background-size: cover;
 }
 #header .wrap .top_menu {
   display: -webkit-box;
@@ -2657,7 +2720,7 @@ img {
   color: #fff;
 }
 #header .wrap .top_menu > li:hover .hover_action span {
-  transform: translateY(-100%);
+  transform: translate3d(0, -100%, 0) scale(1.2);
 }
 #header .wrap .top_menu > li a {
   position: relative;
@@ -2680,16 +2743,17 @@ img {
   justify-content: flex-start;
   -webkit-box-align: flex-start;
   align-items: flex-start;
+  height: 100%;
+  filter: url("#goo");
 }
 #header .wrap .top_menu > li .hover_action span {
-  flex-shrink: 0;
   display: block;
-  width: 25%;
-  height: 65px;
+  width: 30%;
+  height: 100%;
   background: #000;
   border-radius: 25px;
   transition: 0.5s;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 #header .wrap .top_menu > li .hover_action span:nth-child(1) {
   transition-delay: 0s;
@@ -2702,6 +2766,131 @@ img {
 }
 #header .wrap .top_menu > li .hover_action span:nth-child(4) {
   transition-delay: 0.24s;
+}
+#header .gnb_wrap .btn_gnb {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  background: none;
+}
+#header .gnb_wrap .btn_gnb span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+#header .gnb_wrap .btn_gnb span:nth-child(1) {
+  background: url("../images/ico_menu.png");
+}
+#header .gnb_wrap .btn_gnb span:nth-child(2) {
+  background: url("../images/ico_menu_close.svg");
+}
+#header .gnb_menu_wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+#header .gnb_menu_wrap::before {
+  position: absolute;
+  inset: 0;
+  background: rgba(48, 48, 48, 0.9);
+  z-index: -1;
+  content: "";
+}
+#header .gnb_menu_wrap .gnb {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: "APHQ";
+  opacity: 0;
+  transform: translate3d(0, 100px, 0);
+  transition: 1.5s;
+}
+#header .gnb_menu_wrap .gnb > ul {
+  display: -webkit-box;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: flex-start;
+  align-items: flex-start;
+  gap: 80px;
+}
+#header .gnb_menu_wrap .gnb > ul > li {
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.5;
+}
+#header .gnb_menu_wrap .gnb > ul > li:hover {
+  opacity: 1;
+}
+#header .gnb_menu_wrap .gnb > ul > li > strong {
+  font-size: 4.8rem;
+  letter-spacing: -1.68px;
+  font-weight: 500;
+  line-height: 5.8rem;
+}
+#header .gnb_menu_wrap .gnb > ul > li > strong > span {
+  display: block;
+  margin-bottom: 40px;
+  bottom: 38px;
+  font-size: 2.4rem;
+  letter-spacing: -0.6px;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+#header .gnb_menu_wrap .gnb > ul > li > ul {
+  margin-top: 40px;
+}
+#header .gnb_menu_wrap .gnb > ul > li > ul > li a {
+  font-size: 2.4rem;
+  letter-spacing: 0.84px;
+  font-weight: 400;
+  line-height: 5.2rem;
+}
+#header .gnb_menu_wrap .gnb > ul > li > ul > li a:hover {
+  text-decoration: underline;
+}
+#header .gnb_menu_wrap .sns {
+  display: -webkit-box;
+  display: flex;
+  justify-content: flex-start;
+  -webkit-box-align: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  gap: 10px;
+}
+#header .gnb_menu_wrap .sns > a {
+  width: 40px;
+  height: 40px;
+}
+#header .gnb_menu_wrap .bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+#header .gnb_menu_wrap .bg > li {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+#header .gnb_menu_wrap .bg > li.active {
+  opacity: 1;
 }
 
 #footer {
