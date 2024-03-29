@@ -7,6 +7,18 @@ $(function() {
 
   //메인 sec01 logo fix
   let secBgLogo = $(".main .sec01 .bg_logo");
+
+  gsap.to('.sec01 .sec_tit', {
+    scrollTrigger: {
+      trigger:".sec01 .sec_tit",
+      start: "top top",
+      scrub:true,
+      toggleActions:"restart  pause  reverse none",
+      markers:false,
+    },
+    autoAlpha: 1,
+  })
+  
   gsap.to(secBgLogo, {
     scrollTrigger: {
       trigger:secBgLogo,
