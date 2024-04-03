@@ -1,4 +1,46 @@
 $(function() {
+
+   //카운트
+  const items = $('.count_wrap .num span');
+  let targetPos = $('.count_wrap').parents('section');
+  gsap.from(items, {
+    textContent: 0,
+    duration: 1.5,
+    ease: "power1.in",
+    snap: { textContent: 1 },
+    stagger: {
+      // each: 1.0,
+      onUpdate: function() {
+        this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
+      },
+    },
+    scrollTrigger : {
+      trigger:targetPos,
+      start:"-400 top"
+    }
+  });
+  
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  //ir cont
+  let item = $('.ir_cont .item');
+  gsap.utils.toArray(item).forEach(function(item){
+    gsap.timeline({
+      scrollTrigger :{
+        trigger:item,
+        start:'-500 top',
+        toggleClass: {'targets':item, className:'active'},
+        // scrub:true,
+        markers:false,
+        stagger:0.5,
+      }
+    })
+  })
+
+
+
   //메인 top logo svg
   setTimeout(function() {
     $('.drawing_logo').fadeOut();
@@ -6,14 +48,15 @@ $(function() {
 
 
   //메인 sec01 logo fix
-  let secBgLogo = $(".main .sec01 .bg_logo");
+  let secBgLogo = $(".main .about_cont .bg_logo");
 
-  gsap.to('.sec01 .sec_tit', {
+  gsap.to('.about_cont .sec_tit', {
     scrollTrigger: {
-      trigger:".sec01 .sec_tit",
-      start: "top top",
+      trigger:".about_cont",
+      start: "-400 top",
+      end: "top top",
       scrub:true,
-      toggleActions:"restart  pause  reverse none",
+      // toggleActions:"restart  pause  reverse none",
       markers:false,
     },
     autoAlpha: 1,
@@ -32,43 +75,6 @@ $(function() {
       markers:false,
     },
   })
-
-  let sec01Item = $('.main .sec01 .item');
-  gsap.utils.toArray(sec01Item).forEach(function(item){
-    gsap.timeline({
-      scrollTrigger :{
-        trigger:item,
-        start:'-500 top',
-        toggleClass: {'targets':item, className:'active'},
-        scrub:true,
-        markers:false,
-        stagger:0.5,
-      }
-    })
-  })
-
-  //main sec02 카운트
-  const items = $('.sec02 .count_wrap .num span');
-  gsap.from(items, {
-    textContent: 0,
-    duration: 1.5,
-    ease: "power1.in",
-    snap: { textContent: 1 },
-    stagger: {
-      // each: 1.0,
-      onUpdate: function() {
-        this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent));
-      },
-    },
-    scrollTrigger : {
-      trigger:".sec02",
-      start:"-300 top"
-    }
-  });
-  
-  function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
 
   //메인 video
   $(document).on('click','.videoPoster',function(e) {
@@ -118,8 +124,8 @@ $(function() {
 
 
 //메인 sns 스와이퍼
-function mainSnsSwiper() {
-  let mainSnsSwiper = new Swiper(".sns_swiper", {
+function view4Swiper() {
+  let view4Swiper = new Swiper(".view4_swiper", {
     slidesPerView: 4,
     loop: false,
     spaceBetween : 40,
@@ -128,8 +134,8 @@ function mainSnsSwiper() {
     observer: true,
     observeParents: true,
     navigation: { 
-      nextEl: ".sns_button_next",
-      prevEl: ".sns_button_prev",
+      nextEl: ".button_next",
+      prevEl: ".button_prev",
     },
     breakpoints: {        
         768: {
@@ -141,5 +147,28 @@ function mainSnsSwiper() {
   });
 }
 
+//sub2 top video
+function scrollVideo() {
+  let video = $(".sub2 .top_video video")[0],//실제 비디오 반환
+      lastScrollTop = 0,
+      isPlaying = false;
 
+  $(window).scroll(function() {
+    let scroll = $(this).scrollTop();
+    if (scroll > lastScrollTop) {
+      if (!video.paused) {
+        video.pause();
+        isPlaying = false;
+      }
+    } else {
+      if (!isPlaying) {
+        video.play();
+        isPlaying = true;
+      }
+    }
+    lastScrollTop = scroll <= 0 ? 0 : scroll; 
+    //스크롤 올리면 다시 재생
+    // 페이지 맨 위에 도달하면 스크롤 위치를 0으로 설정
+  });
+}
 
