@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="ico_16_arrow_right" transform="translate(-138 149) rotate(-90)">
+    <rect id="base" width="16" height="16" transform="translate(133 138)" fill="none"/>
+    <g id="icon" transform="translate(133 138)">
+      <rect id="box" width="1.414" height="5.657" rx="0.707" transform="translate(8 11) rotate(-135)" fill="#303030"/>
+      <rect id="box-2" data-name="box" width="1.414" height="5.657" rx="0.707" transform="translate(9 10) rotate(135)" fill="#303030"/>
+    </g>
+  </g>
+</svg>

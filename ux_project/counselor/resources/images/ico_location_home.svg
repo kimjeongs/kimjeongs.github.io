@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="ico_24_home" transform="translate(0 -1)">
+    <rect id="base" width="24" height="24" transform="translate(0 1)" fill="none"/>
+    <path id="path" d="M21,21.978V12.989L12,4,3,12.989V22" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+    <path id="line" d="M0,0V8" transform="translate(12 14)" fill="none" stroke="#1f1f1f" stroke-width="2"/>
+  </g>
+</svg>
