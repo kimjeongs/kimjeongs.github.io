@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/*font + */
+@import url('//fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&subset=korean');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url(http://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css);
+/* font-family: 'Nanum Square'; */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* font-family: 'Pretendard', sans-serif; */
+
+/* font-family: 'Geologica'; */
+@font-face {
+	font-family: 'Geologica', sans-serif;
+	src: url('../fonts/Geologica_Auto-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-ExtraBold.woff') format('woff');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Geologica';
+	src: url('../fonts/Geologica_Auto-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
