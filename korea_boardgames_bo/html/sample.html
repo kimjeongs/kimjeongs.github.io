@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코리아보드게임즈_admin</title>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<!--  서브 페이지 sub_board -->
+<body class="sub_board">
+  <!-- container -->
+  <div id="tabs-menu1" class="container">
+    <div class="container_tit">
+      <h2>보드게임이야기(컬럼리스트) 관리</h2>
+      <ul class="container_tit_location">
+        <li>커뮤니티 관리</li>
+        <li>보드게임이야기(컬럼리스트) 관리</li>
+      </ul>
+    </div>
+    <!-- contents -->
+    <div class="contents">
+      <form class="form-horizontal" name="frmCommon" id="frmCommon">
+        <input type="hidden" name="boardCd" value="contents">
+        <input type="hidden" name="postNo" value="9">
+        <input type="hidden" name="submitFlag" value="U">
+        <input type="hidden" name="searchYn" value="N">
+        <!-- contents_card -->
+        <!-- 공통부분 area  -->
+        <div class="contents_card common_contents_card">
+          <div class="contents_card_head">
+            <h3>공통 부분</h3>
+            <i class="ico_chev_down ico_24"></i>
+          </div>
+          <!-- 전시기간 설정  -->
+          <div class="row">
+            <div class="col col_4">
+              <div class="col_inner">
+                <div class="tit">전시기간 설정<span class="tit_required"></span></div>
+                <div class="cont">
+                  <div class="input_group input_icon_left">
+                    <input type="text" class="input_text w_300" name="dspperiod" id="dspPeriod" s="" readonly="" value="" autocomplete="off" disabled="disabled">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" id="dspperiodYn" class="input_check" name="dspperiodYn" value="N" checked="checked">
+                      <label for="dspperiodYn">항상</label>
+                    </div>
+                    <i class="ico_sprite_cal ico_24"></i>
+                    <input type="hidden" name="dspdateBegin" value="19000101">
+                    <input type="hidden" name="dspdateEnd" value="99991231">
+                  </div>
+                </div>
+              </div>
+            </div>                  
+          </div>
+          <!-- // 전시기간 설정 -->
+          <!-- 썸네일 -->
+          <div class="row">
+            <div class="col col_12">
+              <div class="col_inner">
+                <div class="tit">썸네일</div>
+                <div class="cont">
+                  <div class="image_box_wrap">
+                    <div class="image_box">
+                      <button type="button" class="btn btn_sm btn_icon" style="display: none;" onclick="delImage(this);"><i class="ico_del ico_24"></i></button>
+                      <div class="image_box_upload" onclick="openImageUpload(this)"> + Image Upload<br>(Web)</div>
+                      <input type="hidden" class="image_file" name="thumbPc" value="" accept="image/*">
+                    </div>
+                    <div class="image_box">
+                      <button type="button" class="btn btn_sm btn_icon" style="display: none;" onclick="delImage(this);"><i class="ico_del ico_24"></i></button>
+                      <div class="image_box_upload" onclick="openImageUpload(this)"> + Image Upload<br>(Mobile)</div>
+                      <input type="hidden" class="image_file" name="thumbMobile" value="" accept="image/*">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 썸네일 -->
+          <!-- 콘텐츠 타입 -->
+          <div class="row">
+            <div class="col col_12">
+              <div class="col_inner">
+                <div class="tit">콘텐츠 타입<span class="tit_required"></span></div>
+                <div class="cont">
+                  <div class="input_radio_wrap">
+                    <input type="radio" class="input_radio contType" name="contentType" id="type-IMAGE" value="IMAGE">
+                    <label for="type-IMAGE">
+                        이미지
+                    </label>
+                
+                    <input type="radio" class="input_radio contType" name="contentType" id="type-VIDEO" value="VIDEO" checked="checked">
+                    <label for="type-VIDEO">
+                        영상
+                    </label>
+                
+                    <input type="radio" class="input_radio contType" name="contentType" id="type-EDITOR" value="EDITOR">
+                    <label for="type-EDITOR">
+                        에디터
+                    </label>
+                      
+                    <div class="select_box tbl_select_box spm_l_16" id="templateSelectBox" style="display:none;">
+                      <span class="select_box_arr"></span>
+                      <select class="select_box_value" name="tmpCd" id="tmpCd">
+                        <option value="md_tmp01">MD 추천 관리 type1 tmp</option>
+                        <option value="tmp_001">[T] 메인비쥬얼</option>
+                        <option value="icon_tmp">[T] 아이콘 카테고리</option>
+                        <option value="sp_ex_tmp">기획전_tmp</option>
+                        <option value="new_tmp">뉴스리스트 tmp</option>
+                        <option value="best_tmp">베스트_tmp</option>
+                        <option value="brnd_tmp01">브랜드관 관리 type1 tmp</option>
+                        <option value="gnrtn_tmp">세대별 추천 type1 tmp</option>
+                        <option value="newprd_tmp">신상품_tmp</option>
+                        <option value="child_tmp">아이 발달 관리 tpye1 tmp</option>
+                        <option value="rltd_tmp">연관 상품 tmp01</option>
+                        <option value="year_tmp">연말상품관리</option>
+                        <option value="people_tmp">인원별 관리 tpye1 tmp</option>
+                        <option value="daily_tmp">일일 특가_tmp</option>
+                        <option value="prod_tmp">제품리스트  tmp</option>
+                        <option value="prd_tmp">추천상품_tmp</option>
+                        <option value="column_tmp">컬럼 리스트 tmp</option>
+                        <option value="TEM002">테스트</option>
+                        <option value="TEM001">템플릿 테스트1</option>
+                        <option value="bnft_tmp01">특가혜택 관리 type1 tmp</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 콘텐츠 타입 -->
+        </div>
+        <!-- // 공통부분 area  -->
+        <!--// contents_card -->
+      </form>
+
+      <!-- 콘텐츠 설정 area  -->
+      <div class="contents_card common_contents_card" id="div-contents"> 
+        <div class="contents_card_head">
+          <h3>콘텐츠 설정</h3>
+          <i class="ico_chev_down ico_24"></i>
+        </div>
+        <form class="form-horizontal" name="frmContents">
+          <input type="hidden" name="boardCd" value="contents">
+          <input type="hidden" name="langCd" value="KO">
+          <input type="hidden" name="postNo" value="9">
+          <input type="hidden" name="langNm" value="한국어">
+          <!-- 제목 & 부제 -->
+          <div class="row">
+            <div class="col col_8">
+              <div class="col_inner">
+                <div class="tit">제목<span class="tit_required"></span></div>
+                <div class="cont">
+                  <div class="input_group">
+                    <input type="text" class="input_text" name="title" value="제목 테스트">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_4">
+              <div class="col_inner">
+                <div class="tit">부제</div>
+                <div class="cont">
+                  <div class="input_group">
+                    <input type="text" class="input_text" name="subtitle" value="부제 테스트">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 제목 & 부제 -->
+          <!-- 해시태그 & 전시여부 -->
+          <div class="row">
+            <div class="col col_8">
+              <div class="col_inner">
+                <div class="tit">해시태그</div> 
+                <div class="cont">
+                  <div class="input_group">
+                    <input type="text" class="input_text" name="hashTag" value="" placeholder="구분자 세미콜론(;)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_4">
+              <div class="col_inner">
+                <div class="tit">전시여부<span class="tit_required"></span></div> 
+                <div class="cont">
+                  <div class="input_radio_wrap">                            
+                    <input type="radio" class="input_radio" name="dspYn" id="active-Y" value="Y">
+                    <label class="custom-control-label" for="active-Y">전시</label>
+                    <input type="radio" class="input_radio" name="dspYn" id="active-N" value="N" checked="checked">
+                    <label class="custom-control-label" for="active-N">미전시</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 해시태그 & 전시여부 -->
+          <!-- 댓글사용여수 & 대댓글 여부& 댓글 참여횟수 -->
+          <div class="row">
+            <div class="col col_3">
+              <div class="col_inner">
+                <div class="tit">댓글 사용여부</div>
+                <div class="cont">
+                  <div class="input_radio_wrap">                                
+                    <input type="radio" class="input_radio" name="replyYn" id="replyYn-Y" value="Y">
+                    <label class="custom-control-label" for="replyYn-Y">사용</label>                                
+                    <input type="radio" class="input_radio" name="replyYn" id="replyYn-N" value="N" checked="checked">
+                    <label class="custom-control-label" for="replyYn-N">미사용</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_3">
+              <div class="col_inner">
+                <div class="tit">대댓글 유무</div>
+                <div class="cont">
+                  <div class="input_radio_wrap">
+                    <input type="radio" class="input_radio" name="replySub" id="replySub-Y" value="Y">
+                    <label class="custom-control-label" for="replySub-Y">사용</label>                            
+                    <input type="radio" class="input_radio" name="replySub" id="replySub-N" value="N" checked="checked">
+                    <label class="custom-control-label" for="replySub-N">미사용</label>                            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_6">
+              <div class="col_inner">
+                <div class="tit">댓글 참여 횟수</div>
+                <div class="cont">
+                  <div class="input_group">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="purchase-quantity-no" class="input_radio" name="replyCnt" value="0" checked="checked">
+                      <label for="purchase-quantity-no">제한 없음</label>
+                      <input type="radio" id="purchase-quantity-none" class="input_radio" name="replyCnt" value="1">
+                      <label for="purchase-quantity-none">1일 1회</label>
+                      <input type="radio" id="purchase-quantity-yes" class="input_radio" name="replyCnt" value="-">
+                      <label for="purchase-quantity-yes">1일</label>
+                    </div>
+                    <input type="text" name="replyCntInput" class="input_text w_100" numberonly="" maxlength="2" value=""><span>회</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 댓글사용여수 & 대댓글 여부& 댓글 참여횟수 -->
+          <!-- 콘텐츠 타입 레이아웃 -->
+          <!-- VIDEO -->
+          <div class="video-panel spm_t_8">
+            <input type="hidden" name="seq" value="1">
+            <input type="hidden" name="contentType" value="VIDEO">
+            <div class="row">
+              <div class="col col_6">
+                <div class="col_inner">
+                  <div class="tit">영상</div>
+                  <div class="cont">
+                    <div class="select_box tbl_select_box">
+                      <span class="select_box_arr"></span>
+                      <select class="select_box_value videoType" name="videoType">
+                        <option value="YOUTUBE">유튜브</option>
+                        <option value="UPLOAD" selected="selected">동영상업로드</option>
+                      </select>
+                    </div>
+                    <div class="input_group youtube spm_t_8" style="display: none;">
+                      <input type="text" class="input_text" value="https://www.youtube.com/watch?v=" disabled="">
+                      <input type="text" class="input_text youtube-id" name="videoLink" value="" placeholder="(url 뒤 고유 식별자 입력)">
+                      <button type="button" class="btn btn-sm btn-danger btn-flat btn-youtube"><i class="fab fa-youtube"></i></button>
+                    </div>
+                    <div class="image_box_wrap upload-video spm_t_8">
+                      <div class="image_box">
+                        <button type="button" class="btn btn_sm btn_icon" style="display: none;" onclick="delVideo(this);"><i class="ico_del ico_24"></i></button>
+                        <div class="btn-video-upload" onclick="openVideoUpload(this)"> + Video Upload</div>
+                        <input type="hidden" class="video-file" name="video" value="" accept="video/*">
+                      </div>
+                    </div>
+                    <div class="image_box_wrap youtube spm_t_8" style="display: none;">
+                      <iframe width="560" height="315" class="embed-responsive-item youtube-player" frameborder="0" src="https://www.youtube.com/embed/" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">영상 썸네일</div>
+                  <div class="cont">
+                    <div class="input_check_wrap">
+                      <input type="checkbox" class="input_check" name="videoThumbYn" id="videoThumbYn" checked="checked">
+                      <label for="videoThumbYn"> 업로드한 썸네일 사용</label>
+                    </div>
+                    <div class="image_box_wrap">
+                      <div class="image_box">
+                        <button type="button" class="btn btn_sm btn_icon" onclick="delImage(this);"><i class="ico_del ico_24"></i></button>
+                        <div class="image_box_upload" style="display: none;" onclick="openImageUpload(this)"> + Image Upload<br>(Web)</div>
+                        <input type="hidden" class="image_file" name="videoThumbPc" value="upload/2024-03-05/31mdLcN1wfrME2b4rExB.jpeg" accept="image/*">
+                        <img src="https://apwf.s3.ap-northeast-2.amazonaws.com/upload/2024-03-05/31mdLcN1wfrME2b4rExB.jpeg">
+                      </div>
+                      <div class="image_box">
+                        <button type="button" class="btn btn_sm btn_icon" onclick="delImage(this);"><i class="ico_del ico_24"></i></button>
+                        <div class="image_box_upload" style="display: none;" onclick="openImageUpload(this)"> + Image Upload<br>(Mobile)</div>
+                        <input type="hidden" class="image_file" name="videoThumbMobile" value="upload/2024-03-05/Mu81V3wikeAjLIXuzXe6.jpeg" accept="image/*">
+                        <img src="https://apwf.s3.ap-northeast-2.amazonaws.com/upload/2024-03-05/Mu81V3wikeAjLIXuzXe6.jpeg">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">Alt Tag</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" class="input_text" name="videoAltTag" value="alt tag test">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>
+          <!--// VIDEO -->
+          <!-- EDITOR -->
+          <div class="spm_t_8 editor-panel">
+            <input type="hidden" name="seq" value="2">
+            <input type="hidden" name="contentType" value="EDITOR">
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">에디터</div>
+                  <div class="cont">
+                    <div class="editor_box">
+                      <textarea class="form-control editor" rows="5" name="contents" id="contents_1" aria-hidden="true" style="display: none;">&lt;p&gt;&lt;strong&gt;에디터 테스트&lt;/strong&gt;&lt;/p&gt;</textarea><div role="application" class="tox tox-tinymce" style="visibility: hidden; height: 500px;" data-mce-style="visibility: hidden; height: 500px;"><div class="tox-editor-container"><div class="tox-editor-header"><div role="group" class="tox-toolbar-overlord"><div role="group" class="tox-toolbar__primary"><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Undo" title="Undo" type="button" tabindex="-1" class="tox-tbtn" aria-disabled="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M6.4 8H12c3.7 0 6.2 2 6.8 5.1.6 2.7-.4 5.6-2.3 6.8a1 1 0 0 1-1-1.8c1.1-.6 1.8-2.7 1.4-4.6-.5-2.1-2.1-3.5-4.9-3.5H6.4l3.3 3.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 1.4L6.4 8z" fill-rule="nonzero"></path></svg></span></button><button aria-label="Redo" title="Redo" type="button" tabindex="-1" class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M17.6 10H12c-2.8 0-4.4 1.4-4.9 3.5-.4 2 .3 4 1.4 4.6a1 1 0 1 1-1 1.8c-2-1.2-2.9-4.1-2.3-6.8.6-3 3-5.1 6.8-5.1h5.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3z" fill-rule="nonzero"></path></svg></span></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button title="Font sizes" aria-label="Font sizes" aria-haspopup="true" type="button" unselectable="on" tabindex="-1" class="tox-tbtn tox-tbtn--select tox-tbtn--bespoke" aria-expanded="false" style="user-select: none;"><span class="tox-tbtn__select-label">16px</span><div class="tox-tbtn__select-chevron"><svg width="10" height="10"><path d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8z" fill-rule="nonzero"></path></svg></div></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><div aria-pressed="false" aria-label="Text color" title="Text color" role="button" aria-haspopup="true" unselectable="on" tabindex="-1" class="tox-split-button" aria-expanded="false" aria-describedby="aria_5217937862451709705783901" style="user-select: none;"><span role="presentation" tabindex="-1" class="tox-tbtn"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><g fill-rule="evenodd"><path id="tox-icon-text-color__color" d="M3 18h18v3H3z"></path><path d="M8.7 16h-.8a.5.5 0 0 1-.5-.6l2.7-9c.1-.3.3-.4.5-.4h2.8c.2 0 .4.1.5.4l2.7 9a.5.5 0 0 1-.5.6h-.8a.5.5 0 0 1-.4-.4l-.7-2.2c0-.3-.3-.4-.5-.4h-3.4c-.2 0-.4.1-.5.4l-.7 2.2c0 .3-.2.4-.4.4zm2.6-7.6l-.6 2a.5.5 0 0 0 .5.6h1.6a.5.5 0 0 0 .5-.6l-.6-2c0-.3-.3-.4-.5-.4h-.4c-.2 0-.4.1-.5.4z"></path></g></svg></span></span><span role="presentation" tabindex="-1" class="tox-tbtn tox-split-button__chevron"><svg width="10" height="10"><path d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8z" fill-rule="nonzero"></path></svg></span><span aria-hidden="true" id="aria_5217937862451709705783901" style="display: none;">To open the popup, press Shift+Enter</span></div></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Bold" title="Bold" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M7.8 19c-.3 0-.5 0-.6-.2l-.2-.5V5.7c0-.2 0-.4.2-.5l.6-.2h5c1.5 0 2.7.3 3.5 1 .7.6 1.1 1.4 1.1 2.5a3 3 0 0 1-.6 1.9c-.4.6-1 1-1.6 1.2.4.1.9.3 1.3.6s.8.7 1 1.2c.4.4.5 1 .5 1.6 0 1.3-.4 2.3-1.3 3-.8.7-2.1 1-3.8 1H7.8zm5-8.3c.6 0 1.2-.1 1.6-.5.4-.3.6-.7.6-1.3 0-1.1-.8-1.7-2.3-1.7H9.3v3.5h3.4zm.5 6c.7 0 1.3-.1 1.7-.4.4-.4.6-.9.6-1.5s-.2-1-.7-1.4c-.4-.3-1-.4-2-.4H9.4v3.8h4z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Italic" title="Italic" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M16.7 4.7l-.1.9h-.3c-.6 0-1 0-1.4.3-.3.3-.4.6-.5 1.1l-2.1 9.8v.6c0 .5.4.8 1.4.8h.2l-.2.8H8l.2-.8h.2c1.1 0 1.8-.5 2-1.5l2-9.8.1-.5c0-.6-.4-.8-1.4-.8h-.3l.2-.9h5.8z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Strikethrough" title="Strikethrough" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><g fill-rule="evenodd"><path d="M15.6 8.5c-.5-.7-1-1.1-1.3-1.3-.6-.4-1.3-.6-2-.6-2.7 0-2.8 1.7-2.8 2.1 0 1.6 1.8 2 3.2 2.3 4.4.9 4.6 2.8 4.6 3.9 0 1.4-.7 4.1-5 4.1A6.2 6.2 0 0 1 7 16.4l1.5-1.1c.4.6 1.6 2 3.7 2 1.6 0 2.5-.4 3-1.2.4-.8.3-2-.8-2.6-.7-.4-1.6-.7-2.9-1-1-.2-3.9-.8-3.9-3.6C7.6 6 10.3 5 12.4 5c2.9 0 4.2 1.6 4.7 2.4l-1.5 1.1z"></path><path d="M5 11h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2z" fill-rule="nonzero"></path></g></svg></span></button><button aria-label="Underline" title="Underline" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M16 5c.6 0 1 .4 1 1v5.5a4 4 0 0 1-.4 1.8l-1 1.4a5.3 5.3 0 0 1-5.5 1 5 5 0 0 1-1.6-1c-.5-.4-.8-.9-1.1-1.4a4 4 0 0 1-.4-1.8V6c0-.6.4-1 1-1s1 .4 1 1v5.5c0 .3 0 .6.2 1l.6.7a3.3 3.3 0 0 0 2.2.8 3.4 3.4 0 0 0 2.2-.8c.3-.2.4-.5.6-.8l.2-.9V6c0-.6.4-1 1-1zM8 17h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Align left" title="Align left" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm0 4h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2zm0-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Align center" title="Align center" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm3 4h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 1 1 0-2zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2zm-3-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Align right" title="Align right" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm6 4h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2zm0 8h8c.6 0 1 .4 1 1s-.4 1-1 1h-8a1 1 0 0 1 0-2zm-6-4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Justify" title="Justify" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M5 5h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 1 1 0-2zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2zm0 4h14c.6 0 1 .4 1 1s-.4 1-1 1H5a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Decrease indent" title="Decrease indent" type="button" tabindex="-1" class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2zm1.6-3.8a1 1 0 0 1-1.2 1.6l-3-2a1 1 0 0 1 0-1.6l3-2a1 1 0 0 1 1.2 1.6L6.8 12l1.8 1.2z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Increase indent" title="Increase indent" type="button" tabindex="-1" class="tox-tbtn"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M7 5h12c.6 0 1 .4 1 1s-.4 1-1 1H7a1 1 0 1 1 0-2zm5 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2zm0 4h7c.6 0 1 .4 1 1s-.4 1-1 1h-7a1 1 0 0 1 0-2zm-5 4h12a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2zm-2.6-3.8L6.2 12l-1.8-1.2a1 1 0 0 1 1.2-1.6l3 2a1 1 0 0 1 0 1.6l-3 2a1 1 0 1 1-1.2-1.6z" fill-rule="evenodd"></path></svg></span></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Insert/edit link" title="Insert/edit link" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M6.2 12.3a1 1 0 0 1 1.4 1.4l-2.1 2a2 2 0 1 0 2.7 2.8l4.8-4.8a1 1 0 0 0 0-1.4 1 1 0 1 1 1.4-1.3 2.9 2.9 0 0 1 0 4L9.6 20a3.9 3.9 0 0 1-5.5-5.5l2-2zm11.6-.6a1 1 0 0 1-1.4-1.4l2-2a2 2 0 1 0-2.6-2.8L11 10.3a1 1 0 0 0 0 1.4A1 1 0 1 1 9.6 13a2.9 2.9 0 0 1 0-4L14.4 4a3.9 3.9 0 0 1 5.5 5.5l-2 2z" fill-rule="nonzero"></path></svg></span></button><button aria-label="insert Image" title="insert Image" type="button" tabindex="-1" class="tox-tbtn"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M5 15.7l3.3-3.2c.3-.3.7-.3 1 0L12 15l4.1-4c.3-.4.8-.4 1 0l2 1.9V5H5v10.7zM5 18V19h3l2.8-2.9-2-2L5 17.9zm14-3l-2.5-2.4-6.4 6.5H19v-4zM4 3h16c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H4a1 1 0 0 1-1-1V4c0-.6.4-1 1-1zm6 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill-rule="nonzero"></path></svg></span></button></div><div role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="More..." title="More..." aria-haspopup="true" type="button" data-alloy-tabstop="true" tabindex="-1" class="tox-tbtn" aria-expanded="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M6 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2zm12 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2zm-6 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2z" fill-rule="nonzero"></path></svg></span></button></div></div></div><div class="tox-anchorbar"></div></div><div class="tox-sidebar-wrap"><div class="tox-edit-area"><iframe id="contents_1_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-0 for help." class="tox-edit-area__iframe"></iframe></div><div role="complementary" class="tox-sidebar"><div data-alloy-tabstop="true" tabindex="-1" class="tox-sidebar__slider tox-sidebar--sliding-closed" style="width: 0px;"><div class="tox-sidebar__pane-container"></div></div></div></div></div><div class="tox-statusbar"><div class="tox-statusbar__text-container"><div role="navigation" data-alloy-tabstop="true" class="tox-statusbar__path"><div role="button" data-index="0" tab-index="-1" aria-level="1" tabindex="-1" class="tox-statusbar__path-item">p</div></div></div></div><div aria-hidden="true" class="tox-throbber" style="display: none;"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>              
+          <!--// EDITOR -->
+          <!-- 첨부파일 -->
+          <div class="spm_t_8">
+            <div class="row">
+              <input type="hidden" class="attachments" name="attachments">
+              <div class="col col_7">
+                <div class="col_inner">
+                  <div class="tit">첨부파일</div>
+                  <div class="cont">
+                    <div class="input_group spm_b_12">
+                      <p class="file_uploader_desc">
+                      첨부파일 용량은 파일당 5MB를 초과하실 수 없으며, 총 5개까지 등록 가능합니다.
+                      </p>
+                      <div class="btn_group spm_l_auto">
+                        <button type="button" class="btn btn_sm btn_normal" onclick="$('#fileTbody').find('input:checkbox:checked').closest('tr').remove();">삭제</button>
+                        <button type="button" class="btn btn_sm btn_primary" onclick="attachmentUpload(this)">파일선택</button>
+                      </div>
+                    </div>
+                    <!-- <table class="tbl">
+                      <caption></caption>
+                      <colgroup>
+                        <col style="width:40px">
+                        <col>
+                      </colgroup>
+                      <tbody id="fileTbody">
+                      
+                      </tbody>
+                    </table> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 첨부파일 -->
+          <!--// 콘텐츠 타입 레이아웃 -->
+        </form>
+      </div>
+      <!--// 콘텐츠 설정 area  -->
+
+      <!-- 상품리스트 설정 area  -->
+      <div class="contents_card common_contents_card"> 
+          <div class="contents_card_head">
+            <h3>상품리스트 설정</h3>
+            <i class="ico_chev_down ico_24"></i>
+          </div>    
+          <form class="form-horizontal" name="frmContents">
+            <div class="row prd-btn-div">
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">상품그룹명</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" class="input_text" name="grpNm">
+                       <!-- <button type="button" class="btn btn_sm btn_primary btn_icon" onclick="addPrdList();"><i class="ico_add white ico_24"></i></button> -->
+                      <button type="button" class="btn btn_sm btn_primary btn_icon" onclick="removePrdList(this);"><i class="ico_minus white ico_24"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="row prd-lst-div-0">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">관련상품(2)</div>
+                  <div class="cont cont_scroll">
+                    <div class="input_group">
+                      <table class="tbl movable-row-0">
+                        <caption></caption>
+                        <colgroup>
+                          <col style="width:40px">
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th style="width:40px"></th>
+                            <th style="width:calc((100% - 40px) / 8)">상품코드</th>
+                            <th style="width:calc((100% - 40px) / 8)">상품명</th>
+                            <th style="width:calc((100% - 40px) / 8)">카테고리</th>
+                            <th style="width:calc((100% - 40px) / 8)">제조사</th>
+                            <th style="width:calc((100% - 40px) / 8)">판매구분</th>
+                            <th style="width:calc((100% - 40px) / 8)">전시구분</th>
+                            <th style="width:calc((100% - 40px) / 8)">판매가</th>
+                            <th style="width:calc((100% - 40px) / 8)">할인적용가</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="movable" id="1" data-prd-cd="PD2024009306">
+                            <td class="txt_center">
+                              <div class="input_check_wrap">
+                                <input type="checkbox" id="prdList-1" class="input_check move-check" name="display-category">
+                                <label for="prdList-1"></label>
+                              </div>
+                            </td>
+                            <td>PD2024009306</td>
+                            <td>세트상품 등록 테스트 240227-01</td>
+                            <td>큐브&gt;큐브_중분류1&gt;큐브_중분류1_소분류1</td>
+                            <td>null</td>
+                            <td>판매대기</td>
+                            <td>전시</td>
+                            <td>3000</td>
+                            <td>3000</td>
+                          </tr>
+                          <tr class="movable" id="2" data-prd-cd="PD2024009304">
+                            <td class="txt_center">
+                              <div class="input_check_wrap">
+                                <input type="checkbox" id="prdList-2" class="input_check move-check" name="display-category">
+                                <label for="prdList-2"></label>
+                              </div>
+                            </td>
+                            <td>PD2024009304</td>
+                            <td>테스트 240131-07</td>
+                            <td>큐브&gt;큐브_중분류1&gt;큐브_중분류1_소분류1</td>
+                            <td>null</td>
+                            <td>품절</td>
+                            <td>전시</td>
+                            <td>10000</td>
+                            <td>10000</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="row">
+                      <div class="col col_12 spm_t_8 btn-lst">
+                        <div class="btn_group up_down">
+                          <button type="button" class="btn btn_sm btn_normal move all first-row">최상</button>
+                          <button type="button" class="btn btn_sm btn_normal btn_icon move all up-row"><i class="ico_chev_up ico_16"></i></button>
+                          <input type="text" class="input_text step" value="1"><span>칸 이동</span>
+                          <button type="button" class="btn btn_sm btn_normal btn_icon move all down-row"><i class="ico_chev_down ico_16"></i></button>
+                          <button type="button" class="btn btn_sm btn_normal move all last-row">최하</button>
+                        </div>
+                        <div class="btn_group spm_l_auto">
+                          <button type="button" class="btn btn_sm btn_normal" onclick="$(this).closest('.row').prev('.input_group').find('tbody input:checkbox:checked').closest('tr').remove();">삭제</button>
+                          <button type="button" class="btn btn_sm btn_primary" onclick="prodMgnt.selectPrd(this);">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="row prd-btn-div">
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">상품그룹명</div>
+                  <div class="cont">
+                    <div class="input_group">
+                        <input type="text" class="input_text" name="grpNm">
+                        <button type="button" class="btn btn_sm btn_primary btn_icon" onclick="addPrdList();"><i class="ico_add white ico_24"></i></button>
+                        <button type="button" class="btn btn_sm btn_primary btn_icon" onclick="removePrdList(this);"><i class="ico_minus white ico_24"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>     
+            <div class="row prd-lst-div-0">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">관련상품(0)</div>
+                  <div class="cont cont_scroll">
+                    <div class="input_group">
+                      <table class="tbl movable-row-0">
+                        <caption></caption>
+                        <colgroup>
+                          <col style="width:40px">
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th style="width:40px"></th>
+                            <th style="width:calc((100% - 40px) / 8)">상품코드</th>
+                            <th style="width:calc((100% - 40px) / 8)">상품명</th>
+                            <th style="width:calc((100% - 40px) / 8)">카테고리</th>
+                            <th style="width:calc((100% - 40px) / 8)">제조사</th>
+                            <th style="width:calc((100% - 40px) / 8)">판매구분</th>
+                            <th style="width:calc((100% - 40px) / 8)">전시구분</th>
+                            <th style="width:calc((100% - 40px) / 8)">판매가</th>
+                            <th style="width:calc((100% - 40px) / 8)">할인적용가</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="row">
+                      <div class="col col_12 spm_t_8 btn-lst">
+                        <div class="btn_group up_down">
+                          <button type="button" class="btn btn_sm btn_normal move all first-row">최상</button>
+                          <button type="button" class="btn btn_sm btn_normal btn_icon move all up-row"><i class="ico_chev_up ico_16"></i></button>
+                          <input type="text" class="input_text step" value="1"><span>칸 이동</span>
+                          <button type="button" class="btn btn_sm btn_normal btn_icon move all down-row"><i class="ico_chev_down ico_16"></i></button>
+                          <button type="button" class="btn btn_sm btn_normal move all last-row">최하</button>
+                        </div>
+                        <div class="btn_group spm_l_auto">
+                          <button type="button" class="btn btn_sm btn_normal" onclick="$(this).closest('.row').prev('.input_group').find('tbody input:checkbox:checked').closest('tr').remove();">삭제</button>
+                          <button type="button" class="btn btn_sm btn_primary" onclick="prodMgnt.selectPrd(this);">추가</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="divider"></div>
+      </div>
+      <!--// 상품리스트 설정 area  -->
+      
+      <!-- 상품추가 모달  -->
+      <div class="modal modal_code search_item_modal">
+        <div class="modal_container w_400">
+          <div class="modal_header">
+            <div class="modal_tit">상품 검색</div>
+            <button type="button" class="close_modal" id="close"><i class="ico_close ico_24"></i></button>
+          </div>
+          <div class="modal_content">
+            <div class="modal_content_wrap">
+              <input type="hidden" id="tagNum">
+              <div class="row">
+                <div class="col col_12">
+                  <div class="col_inner">
+                    <div class="tit">상품검색</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="search" class="input_text">
+                        <button type="button" class="btn btn_sm btn_primary" id="btn-modal-school-search" onclick="fnSearchItemData()">검색</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tbl_wrap over_y h_195 spm_t_32">
+                <table class="tbl">
+                  <colgroup>
+                    <col style="width:auto;">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                    <th class="text-center">상품</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tagItemList">
+                    <tr>
+                      <td style="text-align: center;">찾으실 프로그램을 검색하세요.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="btn_group justify_content_center">
+                <button type="button" class="btn btn_sm btn_normal btn_cancel">취소</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // 상품추가 모달  -->
+
+      <!-- 상품태그 설정 영역  -->
+      <div class="contents_card common_contents_card">
+        <div class="contents_card_head">
+          <h3>상품태그 설정</h3>
+          <i class="ico_chev_down ico_24"></i>
+        </div> 
+        <form class="form-horizontal" name="frmContents">
+          <div class="row">
+            <div class="col col_12">
+              <div class="col_inner">
+                <div class="tit">이미지 태그 사용여부</div>
+                <div class="cont">
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="tag_use" value="Y" class="input_radio" name="tag_check">
+                    <label for="tag_use">사용</label>
+                    <input type="radio" id="tag_none" value="N" class="input_radio" name="tag_check" checked="checked">
+                    <label for="tag_none">미사용</label>
+                  </div>
+                </div>
+              </div>    
+            </div>
+          </div>
+          <div class="row" id="imgTagDiv">
+            <div class="col col_12">
+              <div class="col_inner align_items_start">
+                <div class="tit">
+                  <div id="scrollDiv" class="spp_r_16">
+                    <input type="hidden" id="imgCount" value="1">
+                    <div id="tagImgDiv">
+                      <div class="image_box tag_box active" id="tagImg_1" value="1" onclick="viewTagImg(1, this);"></div>
+                    </div>
+                    <div class="image_box" id="addImage">
+                      <h2 class="fs_xxlg"> + </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="cont">
+                  <div class="col_inner">
+                    <div id="tag_container"> <!-- 240315수정: col_6 class 삭제 -->
+                      <div class="tagImgView image_box h_m_468" id="tagImgView_1">
+                        <div class="image_box_upload" onclick="openImageUpload(this, imageTagUploadCallback)"> + Image Upload<br>(Web)</div>
+                        <input type="hidden" id="tagCount_1">
+                        <input type="hidden" class="image_file" accept="image/*">
+                        <input type="hidden" id="tagTextArea">
+                        <input type="hidden" id="image_num" value="1">
+                        <button id="tag_btn" type="button" onclick="tagComment(event,1)" >상품태그적용</button>
+                        <button type="button" id="tag_btn02" style="display: none;">상품태그 할 위치를 <br> 클릭해주세요. </button>
+                      </div>
+                    </div>
+                    <div class="image_box h_m_468 spm_l_16 res_box"> <!-- 240315수정: col_6 class 삭제, res_box class 추가 -->
+                      <textarea class="tag_editor" name="tagContents" id="tagContents" aria-hidden="true" style="display: none;"></textarea>
+                      <div role="application" class="tox tox-tinymce" style="visibility: hidden; height: 469px;" data-mce-style="visibility: hidden; height: 469px;"><div class="tox-editor-container"><div class="tox-editor-header"><div role="group" class="tox-toolbar-overlord"><div role="group" class="tox-toolbar__primary"><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Undo" title="Undo" type="button" tabindex="-1" class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M6.4 8H12c3.7 0 6.2 2 6.8 5.1.6 2.7-.4 5.6-2.3 6.8a1 1 0 0 1-1-1.8c1.1-.6 1.8-2.7 1.4-4.6-.5-2.1-2.1-3.5-4.9-3.5H6.4l3.3 3.3a1 1 0 1 1-1.4 1.4l-5-5a1 1 0 0 1 0-1.4l5-5a1 1 0 0 1 1.4 1.4L6.4 8z" fill-rule="nonzero"></path></svg></span></button><button aria-label="Redo" title="Redo" type="button" tabindex="-1" class="tox-tbtn tox-tbtn--disabled" aria-disabled="true"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M17.6 10H12c-2.8 0-4.4 1.4-4.9 3.5-.4 2 .3 4 1.4 4.6a1 1 0 1 1-1 1.8c-2-1.2-2.9-4.1-2.3-6.8.6-3 3-5.1 6.8-5.1h5.6l-3.3-3.3a1 1 0 1 1 1.4-1.4l5 5a1 1 0 0 1 0 1.4l-5 5a1 1 0 0 1-1.4-1.4l3.3-3.3z" fill-rule="nonzero"></path></svg></span></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button title="Font sizes" aria-label="Font sizes" aria-haspopup="true" type="button" unselectable="on" tabindex="-1" class="tox-tbtn tox-tbtn--select tox-tbtn--bespoke" aria-expanded="false" style="user-select: none;"><span class="tox-tbtn__select-label">16px</span><div class="tox-tbtn__select-chevron"><svg width="10" height="10"><path d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8z" fill-rule="nonzero"></path></svg></div></button></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><div aria-pressed="false" aria-label="Text color" title="Text color" role="button" aria-haspopup="true" unselectable="on" tabindex="-1" class="tox-split-button" aria-expanded="false" aria-describedby="aria_6022165182431709709807884" style="user-select: none;"><span role="presentation" tabindex="-1" class="tox-tbtn"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><g fill-rule="evenodd"><path id="tox-icon-text-color__color" d="M3 18h18v3H3z"></path><path d="M8.7 16h-.8a.5.5 0 0 1-.5-.6l2.7-9c.1-.3.3-.4.5-.4h2.8c.2 0 .4.1.5.4l2.7 9a.5.5 0 0 1-.5.6h-.8a.5.5 0 0 1-.4-.4l-.7-2.2c0-.3-.3-.4-.5-.4h-3.4c-.2 0-.4.1-.5.4l-.7 2.2c0 .3-.2.4-.4.4zm2.6-7.6l-.6 2a.5.5 0 0 0 .5.6h1.6a.5.5 0 0 0 .5-.6l-.6-2c0-.3-.3-.4-.5-.4h-.4c-.2 0-.4.1-.5.4z"></path></g></svg></span></span><span role="presentation" tabindex="-1" class="tox-tbtn tox-split-button__chevron"><svg width="10" height="10"><path d="M8.7 2.2c.3-.3.8-.3 1 0 .4.4.4.9 0 1.2L5.7 7.8c-.3.3-.9.3-1.2 0L.2 3.4a.8.8 0 0 1 0-1.2c.3-.3.8-.3 1.1 0L5 6l3.7-3.8z" fill-rule="nonzero"></path></svg></span><span aria-hidden="true" id="aria_6022165182431709709807884" style="display: none;">To open the popup, press Shift+Enter</span></div></div><div title="" role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="Bold" title="Bold" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M7.8 19c-.3 0-.5 0-.6-.2l-.2-.5V5.7c0-.2 0-.4.2-.5l.6-.2h5c1.5 0 2.7.3 3.5 1 .7.6 1.1 1.4 1.1 2.5a3 3 0 0 1-.6 1.9c-.4.6-1 1-1.6 1.2.4.1.9.3 1.3.6s.8.7 1 1.2c.4.4.5 1 .5 1.6 0 1.3-.4 2.3-1.3 3-.8.7-2.1 1-3.8 1H7.8zm5-8.3c.6 0 1.2-.1 1.6-.5.4-.3.6-.7.6-1.3 0-1.1-.8-1.7-2.3-1.7H9.3v3.5h3.4zm.5 6c.7 0 1.3-.1 1.7-.4.4-.4.6-.9.6-1.5s-.2-1-.7-1.4c-.4-.3-1-.4-2-.4H9.4v3.8h4z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Italic" title="Italic" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M16.7 4.7l-.1.9h-.3c-.6 0-1 0-1.4.3-.3.3-.4.6-.5 1.1l-2.1 9.8v.6c0 .5.4.8 1.4.8h.2l-.2.8H8l.2-.8h.2c1.1 0 1.8-.5 2-1.5l2-9.8.1-.5c0-.6-.4-.8-1.4-.8h-.3l.2-.9h5.8z" fill-rule="evenodd"></path></svg></span></button><button aria-label="Strikethrough" title="Strikethrough" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><g fill-rule="evenodd"><path d="M15.6 8.5c-.5-.7-1-1.1-1.3-1.3-.6-.4-1.3-.6-2-.6-2.7 0-2.8 1.7-2.8 2.1 0 1.6 1.8 2 3.2 2.3 4.4.9 4.6 2.8 4.6 3.9 0 1.4-.7 4.1-5 4.1A6.2 6.2 0 0 1 7 16.4l1.5-1.1c.4.6 1.6 2 3.7 2 1.6 0 2.5-.4 3-1.2.4-.8.3-2-.8-2.6-.7-.4-1.6-.7-2.9-1-1-.2-3.9-.8-3.9-3.6C7.6 6 10.3 5 12.4 5c2.9 0 4.2 1.6 4.7 2.4l-1.5 1.1z"></path><path d="M5 11h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2z" fill-rule="nonzero"></path></g></svg></span></button><button aria-label="Underline" title="Underline" type="button" tabindex="-1" class="tox-tbtn" aria-pressed="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M16 5c.6 0 1 .4 1 1v5.5a4 4 0 0 1-.4 1.8l-1 1.4a5.3 5.3 0 0 1-5.5 1 5 5 0 0 1-1.6-1c-.5-.4-.8-.9-1.1-1.4a4 4 0 0 1-.4-1.8V6c0-.6.4-1 1-1s1 .4 1 1v5.5c0 .3 0 .6.2 1l.6.7a3.3 3.3 0 0 0 2.2.8 3.4 3.4 0 0 0 2.2-.8c.3-.2.4-.5.6-.8l.2-.9V6c0-.6.4-1 1-1zM8 17h8c.6 0 1 .4 1 1s-.4 1-1 1H8a1 1 0 0 1 0-2z" fill-rule="evenodd"></path></svg></span></button></div><div role="toolbar" data-alloy-tabstop="true" tabindex="-1" class="tox-toolbar__group"><button aria-label="More..." title="More..." aria-haspopup="true" type="button" data-alloy-tabstop="true" tabindex="-1" class="tox-tbtn" aria-expanded="false"><span class="tox-icon tox-tbtn__icon-wrap"><svg width="24" height="24"><path d="M6 10a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2zm12 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2zm-6 0a2 2 0 0 0-2 2c0 1.1.9 2 2 2a2 2 0 0 0 2-2 2 2 0 0 0-2-2z" fill-rule="nonzero"></path></svg></span></button></div></div></div><div class="tox-anchorbar"></div></div><div class="tox-sidebar-wrap"><div class="tox-edit-area"><iframe id="tagContents_ifr" frameborder="0" allowtransparency="true" title="Rich Text Area. Press ALT-0 for help." class="tox-edit-area__iframe"></iframe></div><div role="complementary" class="tox-sidebar"><div data-alloy-tabstop="true" tabindex="-1" class="tox-sidebar__slider tox-sidebar--sliding-closed" style="width: 0px;"><div class="tox-sidebar__pane-container"></div></div></div></div></div><div class="tox-statusbar"><div class="tox-statusbar__text-container"><div role="navigation" data-alloy-tabstop="true" class="tox-statusbar__path"></div></div></div><div aria-hidden="true" class="tox-throbber" style="display: none;"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </form>
+      </div>
+      <!-- // 상품태그 설정 영역  -->                
+  
+      <!-- contents_footer -->
+      <div class="spm_t_8 contents_footer fixed">
+        <div class="row">
+          <div class="col col_6">
+            <div class="btn_group">
+              <button type="button" class="btn btn_sm btn_primary" id="btnList"><i class="ico_menu white ico_16"></i>목록</button>
+            </div>
+          </div>
+          <div class="col col_6 justify_content_end">
+            <div class="btn_group">
+              <button type="button" class="btn btn_sm btn_normal" id="btnDel">삭제</button>
+              <button type="button" class="btn btn_sm btn_primary" id="btnSave">저장</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// contents_footer -->
+    </div>
+    <!--// contents -->
+
+    <script type="text/javascript">
+      if (typeof tagImgList == 'undefined') {
+          let tagImgList = new Array();
+          let tagImgDetailList = new Array();
+          let prdGrpList = new Array();
+      }
+    </script>
+</div>
+<!--// container -->
+
+</body>
+
+<script src="../resources/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../resources/js/common.js"></script>
+<script>
+// 체크박스 전체선택
+$(function(){ 
+    var chkList1 = $("input[name=display-category]");
+    var chkList2 = $("input[name=notice-banner]");
+
+    $("#category-all").on("click", function(){
+    if($(this).is(":checked")){
+        chkList1.prop("checked", true);
+    }else
+        chkList1.prop("checked", false);
+    });
+
+    $("#notice-banner-all").on("click", function(){
+    if($(this).is(":checked")){
+        chkList2.prop("checked", true);
+    }else
+        chkList2.prop("checked", false);
+    });
+})
+
+// 메모등록 모달팝업
+$(function(){
+    $('.pop_memo').click(function(){
+    $('.modal').fadeIn(300);
+    $('.modal_container').fadeIn(300);
+    $('body.sub_board').addClass('modal_open');
+    });
+    $('.close_modal').on('click', function(){
+    $('.modal').fadeOut(300);
+    $('.modal_container').fadeOut(300);
+    $('body.sub_board').removeClass('modal_open');
+    });
+});
+
+</script>
+</html>

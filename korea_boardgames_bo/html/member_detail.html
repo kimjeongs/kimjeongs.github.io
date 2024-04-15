@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코리아보드게임즈_admin</title>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<!--  서브 페이지 sub_board -->
+<body class="sub_board">
+  <!-- container -->
+  <div id="tabs-menu1" class="container">
+    <div class="container_tit">
+      <h2>회원관리｜회원 상세</h2>
+      <ul class="container_tit_location">
+        <li>Main</li>
+        <li>회원관리</li>
+        <li>회원목록</li>
+        <li>회원 상세</li>
+      </ul>
+    </div>
+    <!-- contents -->
+    <div class="contents">
+      <!-- contents_card -->
+      <div class="contents_card">
+        <div class="contents_card_head">
+          <h3>기본 정보</h3>
+        </div>
+        <div class="row">
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">개인키(내부키)</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="KBG00000001" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">닉네임</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="보드의신" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">이름</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="홍길동" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">아이디</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="Hongil04" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">휴대폰번호</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="01012341234" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_6">
+            <div class="col_inner">
+              <div class="tit">이메일</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="Hongil@gmail.com" placeholder="내용을 입력해 주세요." disabled>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_12 justify_content_end">
+            <button type="button" class="btn btn_sm btn_primary">회원목록</button>
+          </div>
+        </div>
+      </div>
+      <!--// contents_card -->
+      <!-- inner_tab_menu -->
+      <div class="inner_tab_menu line_tab">
+        <ul>
+          <li class="current tab_list" data-tab="tab1"><a href="#none">회원정보</a></li>
+          <li class="tab_list" data-tab="tab2"><a href="#none">주문내역</a></li>
+          <li class="tab_list" data-tab="tab3"><a href="#none">포인트내역</a></li>
+          <li class="tab_list" data-tab="tab4"><a href="#none">쿠폰내역</a></li>
+          <li class="tab_list" data-tab="tab5"><a href="#none">리뷰내역</a></li>
+        </ul>
+        <div class="tab_bar"></div>
+      </div>
+      <!--// inner_tab_menu -->
+      <!-- tab_cont -->
+      <div class="tab_cont">
+        <!-- tab1 -->
+        <div id="tab1" class="tab_cont_item current">
+          <form>
+            <div class="contents_card">
+              <div class="contents_card_head">
+                <h3>가입정보</h3>
+              </div>
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">성별</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="남" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">비밀번호</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="password" id="" class="input_text" value="****************" placeholder="내용을 입력해 주세요.">
+                        <button type="button" class="btn btn_sm btn_primary">비밀번호 초기화</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">생년월일</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="1980년 01 월 01일" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">회원등급</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="Family" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">가입일</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="2019-01-01 13:45" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">이메일 수신여부</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="Y" placeholder="내용을 입력해 주세요.">
+                        <button type="button" class="btn btn_sm btn_primary btn_email_unsubscribe">수신여부 변경</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">회원구분</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="일반회원" placeholder="내용을 입력해 주세요.">
+                        <button type="button" class="btn btn_sm btn_primary btn_secession">탈퇴처리</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">최근 접속일</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="2023-10-13 13:45" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_12">
+                  <div class="col_inner">
+                    <div class="tit">주소<br/>(기본 배송지)</div>
+                    <div class="cont">
+                      <div class="input_writing_group total_none address_area">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해 주세요.">04387
+서울시 용산구 서빙고로 17,23층
+(한강로 3가,센트럴파크타워)</textarea>
+                      </div>
+                      <button type="button" class="btn btn_sm btn_primary float_r btn_address">배송지 관리</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_12">
+                  <div class="col_inner">
+                    <div class="tit">메모</div>
+                    <div class="cont">
+                      <div class="input_writing_group total_none">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="자유롭게 메모할 내용을 입력해 주세요."></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_12 justify_content_end">
+                  <div class="btn_group">
+                    <button type="button" class="btn btn_sm btn_normal">취소</button>
+                    <button type="button" class="btn btn_sm btn_primary">저장</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!--// tab1 -->
+        <!-- tab2 -->
+        <div id="tab2" class="tab_cont_item">
+          <div class="contents_card">
+            <div class="contents_card_head">
+              <h3>주문내역</h3>
+            </div>
+            <div class="tbl_header">
+              <div class="total">[총 주문건수 <span class="total_num">5</span>건]</div>
+                <div class="select_box tbl_select_box spm_l_auto">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">전체</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div> 
+            </div>
+            <table class="tbl">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col style="width:160px;">
+                <col style="width:130px">
+                <col>
+                <col style="width:100px">
+                <col style="width:120px">
+                <col style="width:130px">
+                <col style="width:120px">
+                <col style="width:160px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>주문번호</th>
+                  <th>결재수단</th>
+                  <th>주문상품명</th>
+                  <th>구매수량</th>
+                  <th>구매금액</th>
+                  <th>결제일자</th>
+                  <th>상태</th>
+                  <th>상태변경일시</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                  <td class="txt_center">계좌이체</td>
+                  <td class="txt_ellipsis">보드게임 #1 외 1건</td>
+                  <td class="txt_center">2</td>
+                  <td class="txt_right">40,000원</td>
+                  <td class="txt_center">2023-10-03</td>
+                  <td class="txt_center">주문완료</td>
+                  <td class="txt_center">2023-10-03 00:00:00</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                  <td class="txt_center">계좌이체</td>
+                  <td class="txt_ellipsis">보드게임명이 길 경우 보드게임명이 길 경우 보드게임명이 길 경우 보드게임명이 길 경우 보드게임명이 길 경우 보드게임명이 길 경우 보드게임명이 길 경우</td>
+                  <td class="txt_center">1</td>
+                  <td class="txt_right">20,000원</td>
+                  <td class="txt_center">2023-10-03</td>
+                  <td class="txt_center">반품신청</td>
+                  <td class="txt_center">2023-10-03 00:00:00</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">3</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                  <td class="txt_center">계좌이체</td>
+                  <td class="txt_ellipsis">보드게임 #3 외 1건</td>
+                  <td class="txt_center">2</td>
+                  <td class="txt_right">40,000원</td>
+                  <td class="txt_center">2023-10-03</td>
+                  <td class="txt_center">상품준비중</td>
+                  <td class="txt_center">2023-10-03 00:00:00</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                  <td class="txt_center">계좌이체</td>
+                  <td class="txt_ellipsis">보드게임 #4 외 1건</td>
+                  <td class="txt_center">1</td>
+                  <td class="txt_right">40,000원</td>
+                  <td class="txt_center">2023-10-03</td>
+                  <td class="txt_center">구매확정</td>
+                  <td class="txt_center">2023-10-03 00:00:00</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                  <td class="txt_center">계좌이체</td>
+                  <td class="txt_ellipsis">보드게임 #1 외 1건</td>
+                  <td class="txt_center">2</td>
+                  <td class="txt_right">40,000원</td>
+                  <td class="txt_center">2023-10-03</td>
+                  <td class="txt_center">반품완료</td>
+                  <td class="txt_center">2023-10-03 00:00:00</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paging_box">
+              <div class="pagination" aria-label="Page Navigation">
+                <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+                <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// tab2 -->
+        <!-- tab3 -->
+        <div id="tab3" class="tab_cont_item">
+          <div class="contents_card">
+            <div class="contents_card_head">
+              <h3>포인트 내역</h3>
+            </div>
+            <div class="contents_card_sub_head">
+              <h4>회원 포인트 현황</h4>
+            </div>
+            <div class="row">
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">현재 보유 포인트</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="850P" placeholder="내용을 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">총 적립 포인트</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="1,350P" placeholder="내용을 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_4">
+                <div class="col_inner">
+                  <div class="tit">총 사용 포인트</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="500P" placeholder="내용을 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_3">
+                <div class="col_inner">
+                  <div class="tit">사용가능</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="1,350P" placeholder="내용을 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_3">
+                <div class="col_inner">
+                  <div class="tit">총 적립 포인트</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="500P" placeholder="내용을 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_3">
+                <div class="col_inner">
+                  <div class="tit">누적사용</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col_3">
+                <div class="col_inner">
+                  <div class="tit">누적소멸</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contents_card_sub_head spm_t_24">
+              <h4>회원 포인트 내역</h4>
+            </div>
+            <table class="tbl">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col style="width:200px;">
+                <col style="width:180px;">
+                <col style="width:150px;">
+                <col>
+                <col style="width:180px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>발생일시</th>
+                  <th>적용 포인트</th>
+                  <th>구분</th>
+                  <th>사유</th>
+                  <th>보유 포인트</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center">2023-03-02 00:00:00</td>
+                  <td  class="txt_center txt_blue">(+)50P</td>
+                  <td  class="txt_center txt_blue">적립</td>
+                  <td class="txt_center">일반리뷰 작성</td>
+                  <td class="txt_center">850P</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center">2023-03-02 00:00:00</td>
+                  <td  class="txt_center txt_red">(-)500P</td>
+                  <td  class="txt_center txt_red">사용</td>
+                  <td class="txt_center">주문</td>
+                  <td class="txt_center">800P</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">3</td>
+                  <td class="txt_center">2023-03-02 00:00:00</td>
+                  <td  class="txt_center txt_blue">(+)50P</td>
+                  <td  class="txt_center txt_blue">적립</td>
+                  <td class="txt_center">일반리뷰 작성</td>
+                  <td class="txt_center">850P</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-03-02 00:00:00</td>
+                  <td  class="txt_center txt_blue">(+)50P</td>
+                  <td  class="txt_center txt_blue">적립</td>
+                  <td class="txt_center">일반리뷰 작성</td>
+                  <td class="txt_center">850P</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center">2023-03-02 00:00:00</td>
+                  <td  class="txt_center txt_blue">(+)50P</td>
+                  <td  class="txt_center txt_blue">적립</td>
+                  <td class="txt_center">일반리뷰 작성</td>
+                  <td class="txt_center">850P</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paging_box">
+              <div class="pagination" aria-label="Page Navigation">
+                <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+                <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// tab3 -->
+        <!-- tab4 -->
+        <div id="tab4" class="tab_cont_item">
+          <div class="contents_card">
+            <div class="contents_card_head">
+              <h3>쿠폰내역</h3>
+            </div>
+            <div class="tbl_header">
+              <div class="total">[총 쿠폰수 <span class="total_num">5</span>건]</div>
+                <div class="select_box tbl_select_box spm_l_auto">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">전체</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div> 
+            </div>
+            <table class="tbl">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col style="width:160px;">
+                <col style="width:130px">
+                <col>
+                <col>
+                <col style="width:180px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:150px">
+                <col style="width:160px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>발급일시</th>
+                  <th>쿠폰종류</th>
+                  <th>발급구분</th>
+                  <th>쿠폰명</th>
+                  <th>유효기간</th>
+                  <th>할인% / 금액</th>
+                  <th>상태</th>
+                  <th>사용일</th>
+                  <th>사용 주문번호</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center">2023-11-01 00:00</td>
+                  <td>상품쿠폰</td>
+                  <td>신규가입</td>
+                  <td>신규회원 혜택상품 12종 50% 할인 쿠폰</td>
+                  <td class="txt_center">2023-10-01 ~ 2023-12-31</td>
+                  <td class="txt_right">50%</td>
+                  <td class="txt_center">사용완료</td>
+                  <td class="txt_center">2023-10-10 03:42:45</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center">2023-11-01 00:00</td>
+                  <td>다운로드 쿠폰</td>
+                  <td>첫 구매 웰컴쿠폰</td>
+                  <td>첫 구매 웰컴쿠폰</td>
+                  <td class="txt_center">2023-10-01 ~ 2023-12-31</td>
+                  <td class="txt_right">1,000원</td>
+                  <td class="txt_center">미사용</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">3</td>
+                  <td class="txt_center">2023-11-01 00:00</td>
+                  <td>상품쿠폰</td>
+                  <td>금액쿠폰</td>
+                  <td>생일 축하 쿠폰</td>
+                  <td class="txt_center">2023-10-01 ~ 2023-12-31</td>
+                  <td class="txt_right">10,000원</td>
+                  <td class="txt_center">사용완료</td>
+                  <td class="txt_center">2023-10-10 03:42:45</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-01 00:00</td>
+                  <td>장바구니 쿠폰</td>
+                  <td>등급혜택 쿠폰</td>
+                  <td>등급 업 혜택 쿠폰</td>
+                  <td class="txt_center">2023-10-01 ~ 2023-12-31</td>
+                  <td class="txt_right">10%</td>
+                  <td class="txt_center">사용완료</td>
+                  <td class="txt_center">2023-10-10 03:42:45</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center">2023-11-01 00:00</td>
+                  <td>시리얼 쿠폰</td>
+                  <td>특정 주문일 쿠폰</td>
+                  <td>특정 주문일 쿠폰</td>
+                  <td class="txt_center">2023-10-01 ~ 2023-12-31</td>
+                  <td class="txt_right">10%</td>
+                  <td class="txt_center">사용완료</td>
+                  <td class="txt_center">2023-10-10 03:42:45</td>
+                  <td class="txt_center txt_blue"><a href="#">TO12345678922</a></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paging_box">
+              <div class="pagination" aria-label="Page Navigation">
+                <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+                <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// tab4 -->
+        <!-- tab5 -->
+        <div id="tab5" class="tab_cont_item">
+          <div class="contents_card">
+            <div class="contents_card_head">
+              <h3>리뷰내역</h3>
+            </div>
+            <div class="tbl_header">
+              <div class="total">[전체 <span class="total_num">7</span>건] (베스트리뷰 <span class="best_num">1</span>건 / 신고 리뷰 <span class="report_num">2</span>건)</div>
+            </div>
+            <table class="tbl">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col style="width:160px;">
+                <col>
+                <col style="width:100px">
+                <col style="width:160px">
+                <col style="width:100px">
+                <col style="width:100px">
+                <col style="width:100px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>상품코드</th>
+                  <th>제목</th>
+                  <th>상품만족도</th>
+                  <th>등록일시</th>
+                  <th>포인트 지급</th>
+                  <th>베스트 리뷰</th>
+                  <th>신고 리뷰</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">만족합니다.</a></td>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">+ 500P</td>
+                  <td class="txt_center">○</td>
+                  <td class="txt_center">-</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">3</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">6</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">7</td>
+                  <td class="txt_center">MGB-1234567890</td>
+                  <td class="txt_ellipsis txt_blue"><a href="#">좋아요</a></td>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">2023-11-04 03:42:45</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">○</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paging_box">
+              <div class="pagination" aria-label="Page Navigation">
+                <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+                <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+                <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+                <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--// tab5 -->
+      </div>
+      <!--// tab_cont -->
+    </div>
+    <!--// contents -->
+  </div>
+  <!--// container -->
+
+  <!-- modal_ popup -->
+  <!-- 탈퇴처리 -->
+  <div class="modal modal_secession">
+    <div class="modal_container">
+      <div class="modal_header">
+        <div class="modal_tit">탈퇴 처리</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <form>
+          <div class="modal_content_wrap">
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">관리자 ID</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="관리자 ID" placeholder="변경사유를 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">탈퇴사유</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="탈퇴사유를 입력해 주세요." >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal">취소</button>
+              <button type="button" class="btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--// 탈퇴처리 -->
+  <!-- 이메일 수신거부 처리 -->
+  <div class="modal modal_email_unsubscribe">
+    <div class="modal_container">
+      <div class="modal_header">
+        <div class="modal_tit">이메일 수신거부 처리</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <form>
+          <div class="modal_content_wrap">
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">관리자 ID</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="관리자 ID" placeholder="변경사유를 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">변경사유</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="변경사유를 입력해 주세요." >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal">취소</button>
+              <button type="button" class="btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--// 이메일 수신거부 처리-->
+  <!-- 배송지 처리 -->
+  <div class="modal modal_address">
+    <div class="modal_container">
+      <div class="modal_header">
+        <div class="modal_tit">배송지 처리</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <form>
+          <div class="modal_content_wrap">
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">기본 배송지</div>
+                  <div class="cont">
+                    <div class="modal_cont_box">
+                      <div class="input_check_wrap">
+                        <input type="checkbox" id="address-check01" class="input_check" name="address-check" onchange="checkboxGroup(this)" checked>
+                        <label for="address-check01"></label>
+                      </div>
+                      <p>
+                      04387<br/>
+                      서울시 용산구 서빙고로 17,23층<br/>
+                      (한강로 3가,센트럴파크타워)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>            
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">배송지1</div>
+                  <div class="cont">
+                    <div class="modal_cont_box">
+                      <div class="input_check_wrap">
+                        <input type="checkbox" id="address-check02" class="input_check" onchange="checkboxGroup(this)" name="address-check">
+                        <label for="address-check02"></label>
+                      </div>
+                      <p>
+                      04387<br/>
+                      서울시 용산구 서빙고로 17,23층<br/>
+                      (한강로 3가,센트럴파크타워)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">배송지2</div>
+                  <div class="cont">
+                    <div class="modal_cont_box">
+                      <div class="input_check_wrap">
+                        <input type="checkbox" id="address-check03" class="input_check" onchange="checkboxGroup(this)" name="address-check">
+                        <label for="address-check03"></label>
+                      </div>
+                      <p>
+                      04387<br/>
+                      서울시 용산구 서빙고로 17,23층<br/>
+                      (한강로 3가,센트럴파크타워)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row border_top">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">관리자 ID</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="관리자 ID" placeholder="변경사유를 입력해 주세요." disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">변경사유</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="변경사유를 입력해 주세요." >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal">취소</button>
+              <button type="button" class="btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--// 배송지 처리 -->
+  <!--// modal_ popup -->
+</body>
+<!--// 서브 페이지 sub_board -->
+
+<script src="../resources/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../resources/js/common.js"></script>
+<script>
+  //모달팝업
+  $(function(){
+    $('.btn_secession').click(function(){
+      $('.modal_secession').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.btn_email_unsubscribe').click(function(){
+      $('.modal_email_unsubscribe').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.btn_address').click(function(){
+      $('.modal_address').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.close_modal').on('click', function(){
+      $(this).parents('.modal').fadeOut(300);
+      $('.modal').fadeOut(300);
+      $('body.sub_board').removeClass('modal_open');
+    });
+  });
+
+  //체크박스 한개만 선택하기
+  function checkboxGroup(currentCheckbox) {
+  const checkboxes = document.getElementsByName("address-check");
+  let checkedCount = 0;
+
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      checkedCount++;
+      if (checkboxes[i] !== currentCheckbox) {
+        checkboxes[i].checked = false;
+      }
+    }
+  }
+  
+  if (checkedCount === 0) {
+    currentCheckbox.checked = true;
+  }
+}
+</script>
+</html>

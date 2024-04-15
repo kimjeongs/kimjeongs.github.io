@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코리아보드게임즈_admin</title>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body class="sub_board">
+  <!-- container -->
+  <div id="tabs-menu2" class="container">
+    <div class="container_tit">
+      <h2>상품 조회</h2>
+      <ul class="container_tit_location">
+        <li>상품관리</li>
+        <li>상품 관리</li>
+      </ul>
+    </div>
+    <!-- contents -->
+    <div class="contents">
+      <!-- contents_card -->
+      <div class="contents_card">
+        <div class="product_total">
+          <ul class="product_total_list">
+            <li>
+              <figure><i class="ico_box_02 white ico_24"></i></figure>
+              <dl>
+                <dt>전체</dt>
+                <dd><span>1,788</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_reply white ico_24"></i></figure>
+              <dl>
+                <dt>판매대기</dt>
+                <dd><span>0</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_cart white ico_24"></i></figure>
+              <dl>
+                <dt>판매중</dt>
+                <dd><span>995</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_timer white ico_24"></i></figure>
+              <dl>
+                <dt>품절</dt>
+                <dd><span>276</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_danger white ico_24"></i></figure>
+              <dl>
+                <dt>판매중지</dt>
+                <dd><span>491</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_close_square white ico_24"></i></figure>
+              <dl>
+                <dt>판매종료</dt>
+                <dd><span>26</span>건</dd>
+              </dl>
+            </li>
+          </ul>
+          <ul class="product_total_list">
+            <li>
+              <figure><i class="ico_store white ico_24"></i></figure>
+              <dl>
+                <dt>전시</dt>
+                <dd><span>900</span>건</dd>
+              </dl>
+            </li>
+            <li>
+              <figure><i class="ico_memo_01 white ico_24"></i></figure>
+              <dl>
+                <dt>미전시</dt>
+                <dd><span>10</span>건</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--// contents_card -->
+      <!-- contents_card -->
+      <div class="contents_card">
+        <div class="row">
+          <div class="col col_12">
+            <div class="col_inner">
+              <div class="tit">
+                <div class="select_box tbl_select_box w_m_100">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">판매기간</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                  </select>     
+                </div>
+              </div>
+              <div class="cont">
+                <div class="input_group input_icon_left">
+                  <input type="text" id="" class="input_text w_300 spm_r_8" value="" placeholder="년-월-일" >
+                  <i class="ico_sprite_cal ico_24"></i> 
+                  <div class="input_radio_wrap">
+                    <input type="radio" id="sale-period-7" class="input_radio" name="sale-period" checked>
+                    <label for="sale-period-7">7일</label>
+                    <input type="radio" id="sale-period-15" class="input_radio" name="sale-period">
+                    <label for="sale-period-15">15일</label>
+                    <input type="radio" id="sale-period-30" class="input_radio" name="sale-period">
+                    <label for="sale-period-30">30일</label>
+                    <input type="radio" id="sale-period-60" class="input_radio" name="sale-period">
+                    <label for="sale-period-60">60일</label>
+                    <input type="radio" id="sale-period-90" class="input_radio" name="sale-period">
+                    <label for="sale-period-90">90일</label>
+                  </div>
+                  <div class="btn_group spm_l_auto">
+                    <button type="button" class="btn btn_sm btn_normal">초기화</button>
+                    <button type="button" class="btn btn_sm btn_primary">조회</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_8">
+            <div class="col_inner">
+              <div class="tit">판매구분</div>
+              <div class="cont">
+                <div class="input_check_wrap">
+                  <input type="checkbox" id="sale-check-all" class="input_check" name="sale-check">
+                  <label for="sale-check-all">전체</label>
+                  <input type="checkbox" id="sale-check-1" class="input_check" name="sale-check">
+                  <label for="sale-check-1">판매대기</label>
+                  <input type="checkbox" id="sale-check-2" class="input_check" name="sale-check">
+                  <label for="sale-check-2">판매중</label>
+                  <input type="checkbox" id="sale-check-3" class="input_check" name="sale-check">
+                  <label for="sale-check-3">판매중지</label>
+                  <input type="checkbox" id="sale-check-4" class="input_check" name="sale-check">
+                  <label for="sale-check-4">품절</label>
+                  <input type="checkbox" id="sale-check-5" class="input_check" name="sale-check">
+                  <label for="sale-check-5">판매종료</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">전시여부</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_8">
+            <div class="col_inner">
+              <div class="tit">카테고리</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">브랜드</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">스토어코드</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요." >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">상품명</div>
+              <div class="cont">
+                <div class="input_group">
+                  <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요." >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">상품유형</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">단독배송여부</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">배송그륩</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col col_4">
+            <div class="col_inner">
+              <div class="tit">관리자메모</div>
+              <div class="cont">
+                <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">선택</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--// contents_card -->
+      <div class="contents_card">
+        <div class="tbl_wrap">
+          <div class="tbl_header">
+            <div class="total">[총 <span class="total_num">5</span>건]</div>
+            <div class="align">
+              <span>정렬기준</span>
+              <div class="select_box tbl_select_box">
+                  <span class="select_box_arr"></span>
+                  <select class="select_box_value" name="" id="">
+                    <option value="">아이템코드 오름차순</option>
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>     
+                </div> 
+            </div>
+            <div class="btn_group spm_l_auto">
+              <button type="button" class="btn btn_xs btn_normal"><i class="ico_pdf ico_16"></i>양식다운로드</button>
+              <button type="button" class="btn btn_xs btn_normal"><i class="ico_exel ico_16"></i>엑셀업로드</button>
+              <button type="button" class="btn btn_xs btn_normal"><i class="ico_exel ico_16"></i>엑셀다운로드</button>
+            </div>
+          </div>
+          <div class="tbl_scroll">
+            <table class="tbl tbl_point">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col>
+                <col>
+                <col>
+                <col style="width:15%">
+                <col>
+                <col style="width:15%">
+                <col>
+                <col style="width:15%">
+                <col style="width:15%">
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>스토어코드</th>
+                  <th>아이템코드</th>
+                  <th>바코드</th>
+                  <th>상품명</th>
+                  <th>판매구분</th>
+                  <th>판매기간</th>
+                  <th>전시여부</th>
+                  <th>전시기간</th>
+                  <th>카테고리</th>
+                  <th>브랜드</th>
+                  <th>소비자가</th>
+                  <th>판매가</th>
+                  <th>할인방법</th>
+                  <th>할인적용가</th>
+                  <th>재고수량</th>
+                  <th>상품유형</th>
+                  <th>단독배송여부</th>
+                  <th>배송그룹</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center">MM500001</td>
+                  <td class="txt_center">IC100001</td>
+                  <td class="txt_center">88123456789123</td>
+                  <td>레디 셋 벳</td>
+                  <td class="txt_center">판매중</td>
+                  <td class="txt_center">상시</td>
+                  <td class="txt_center">전시</td>
+                  <td class="txt_center">상시</td>
+                  <td>대분류>중분류>소분류</td>
+                  <td>코리아</td>
+                  <td class="txt_right">50,000</td>
+                  <td class="txt_right">40,000</td>
+                  <td class="txt_center">10% 할인</td>
+                  <td class="txt_right">36,000</td>
+                  <td class="txt_right">30</td>
+                  <td class="txt_centert">본품</td>
+                  <td class="txt_center">N</td>
+                  <td class="txt_center">기본배송</td>
+                  <td class="txt_center"><button type="button" class="btn btn_xs btn_normal btn_code_modify">간편수정</button></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center">MM500001</td>
+                  <td class="txt_center">IC100001</td>
+                  <td class="txt_center">88123456789123</td>
+                  <td>레디 셋 벳</td>
+                  <td class="txt_center">판매중</td>
+                  <td class="txt_center">상시</td>
+                  <td class="txt_center">전시</td>
+                  <td class="txt_center">상시</td>
+                  <td>대분류>중분류>소분류</td>
+                  <td>코리아</td>
+                  <td class="txt_right">50,000</td>
+                  <td class="txt_right">40,000</td>
+                  <td class="txt_center">10% 할인</td>
+                  <td class="txt_right">36,000</td>
+                  <td class="txt_right">30</td>
+                  <td class="txt_centert">본품</td>
+                  <td class="txt_center">N</td>
+                  <td class="txt_center">기본배송</td>
+                  <td class="txt_center"><button type="button" class="btn btn_xs btn_normal btn_code_modify">간편수정</button></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">3</td>
+                  <td class="txt_center">MM500001</td>
+                  <td class="txt_center">IC100001</td>
+                  <td class="txt_center">88123456789123</td>
+                  <td>레디 셋 벳</td>
+                  <td class="txt_center">판매대기</td>
+                  <td class="txt_center">-</td>
+                  <td class="txt_center">미전시</td>
+                  <td class="txt_center">-</td>
+                  <td>대분류>중분류>소분류</td>
+                  <td>코리아</td>
+                  <td class="txt_right">50,000</td>
+                  <td class="txt_right">40,000</td>
+                  <td class="txt_center">10% 할인</td>
+                  <td class="txt_right">36,000</td>
+                  <td class="txt_right">30</td>
+                  <td class="txt_centert">본품</td>
+                  <td class="txt_center">N</td>
+                  <td class="txt_center">기본배송</td>
+                  <td class="txt_center"><button type="button" class="btn btn_xs btn_normal btn_code_modify">간편수정</button></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">4</td>
+                  <td class="txt_center">MM500001</td>
+                  <td class="txt_center">IC100001</td>
+                  <td class="txt_center">88123456789123</td>
+                  <td>레디 셋 벳</td>
+                  <td class="txt_center">품절</td>
+                  <td class="txt_center">2023-01-01 ~ 2023-12-31</td>
+                  <td class="txt_center">전시</td>
+                  <td class="txt_center">2023-01-01 ~ 2023-12-31</td>
+                  <td>대분류>중분류>소분류</td>
+                  <td>코리아</td>
+                  <td class="txt_right">50,000</td>
+                  <td class="txt_right">40,000</td>
+                  <td class="txt_center">1,000원 할인</td>
+                  <td class="txt_right">36,000</td>
+                  <td class="txt_right">30</td>
+                  <td class="txt_centert">본품</td>
+                  <td class="txt_center">N</td>
+                  <td class="txt_center">기본배송</td>
+                  <td class="txt_center"><button type="button" class="btn btn_xs btn_normal btn_code_modify">간편수정</button></td>
+                </tr>
+                <tr>
+                  <td class="txt_center">5</td>
+                  <td class="txt_center">MM500001</td>
+                  <td class="txt_center">IC100001</td>
+                  <td class="txt_center">88123456789123</td>
+                  <td>레디 셋 벳</td>
+                  <td class="txt_center">판매중</td>
+                  <td class="txt_center">2023-01-01 ~ 2023-12-31</td>
+                  <td class="txt_center">전시</td>
+                  <td class="txt_center">2023-01-01 ~ 2023-12-31</td>
+                  <td>대분류>중분류>소분류</td>
+                  <td>코리아</td>
+                  <td class="txt_right">50,000</td>
+                  <td class="txt_right">40,000</td>
+                  <td class="txt_center">10% 할인</td>
+                  <td class="txt_right">36,000</td>
+                  <td class="txt_right">30</td>
+                  <td class="txt_centert">본품</td>
+                  <td class="txt_center">N</td>
+                  <td class="txt_center">기본배송</td>
+                  <td class="txt_center"><button type="button" class="btn btn_xs btn_normal btn_code_modify">간편수정</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="paging_box">
+            <div class="pagination" aria-label="Page Navigation">
+              <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+              <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// contents -->
+  </div>
+  <!--// container -->
+</body>
+<script src="../resources/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../resources/js/common.js"></script>
+<script>
+// 체크박스 전체선택
+$(function(){ 
+  var chkList1 = $("input[name=sale-check]");
+
+  $("#sale-check-all").on("click", function(){
+    if($(this).is(":checked")){
+      chkList1.prop("checked", true);
+    }else
+      chkList1.prop("checked", false);
+  });
+});
+</script>
+</html>

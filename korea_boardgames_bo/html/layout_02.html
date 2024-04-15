@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코리아보드게임즈_admin</title>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body class="sub_board">
+  <!-- container -->
+  <div id="tabs-menu2" class="container">
+    <div class="container_tit">
+      <h2>권한관리</h2>
+      <ul class="container_tit_location">
+        <li>권한/관리자 관리</li>
+        <li>권한관리</li>
+      </ul>
+    </div>
+    <!-- contents -->
+    <div class="contents">
+      <!-- contents_card -->
+      <div class="contents_card">
+        <form>
+          <div class="row">
+            <div class="col col_6">
+              <div class="col_inner">
+                <div class="tit">권한레벨</div>
+                <div class="cont">
+                  <div class="input_group">
+                    <div class="select_box tbl_select_box">
+                      <span class="select_box_arr"></span>
+                      <select class="select_box_value" name="" id="">
+                        <option value="">선택</option>
+                        <option value="">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                        <option value="">Option 4</option>
+                      </select>     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_6">
+              <div class="col_inner justify_content_end">
+                <div class="btn_group">
+                  <button type="button" class="btn btn_sm btn_normal">초기화</button>
+                  <button type="button" class="btn btn_sm btn_primary">조회</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!--// contents_card -->
+      <!-- 비율 레이아웃 ratio_layout-->
+      <div class="ratio_layout">
+        <!-- contents_card 비율2 contents -->
+        <div class="contents_card col_8">
+          <div class="tbl_header">
+            <div class="total">[총 <span class="total_num">5</span>건]</div>
+            <button type="button" class="btn btn_xs btn_normal spm_l_auto"><i class="ico_exel ico_16"></i>엑셀다운로드</button>
+          </div>
+          <table class="tbl tbl_point">
+            <caption></caption>
+            <colgroup>
+              <col style="width:40px">
+              <col style="width:100px;">
+              <col>
+              <col>
+              <col style="width:80px">
+              <col style="width:80px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>NO</th>
+                <th>권한코드</th>
+                <th>권한명</th>
+                <th>권한레벨</th>
+                <th>기본권한</th>
+                <th>사용여부</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="txt_center">1</td>
+                <td class="txt_center">R01</td>
+                <td>시스템관리자</td>
+                <td>시스템관리자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">2</td>
+                <td class="txt_center">R02</td>
+                <td>보드게임관리자</td>
+                <td>본사관리자</td>
+                <td class="txt_center">Y</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">3</td>
+                <td class="txt_center">R03</td>
+                <td>주문담당자</td>
+                <td>본사사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">4</td>
+                <td class="txt_center">R04</td>
+                <td>상품기획자</td>
+                <td>본사사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">5</td>
+                <td class="txt_center">R05</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">6</td>
+                <td class="txt_center">R06</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">7</td>
+                <td class="txt_center">R07</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">8</td>
+                <td class="txt_center">R08</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">9</td>
+                <td class="txt_center">R09</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+              <tr>
+                <td class="txt_center">10</td>
+                <td class="txt_center">R10</td>
+                <td>CS담당자</td>
+                <td>업체사용자</td>
+                <td class="txt_center">N</td>
+                <td class="txt_center">Y</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="paging_box">
+            <div class="pagination" aria-label="Page Navigation">
+              <a href="javascript:void(0);" class="arr ico_sprite_first"><span>처음</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_prev"><span>이전</span></a>
+              <a href="javascript:void(0);" class="page_link active"><span>1</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>2</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>3</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>4</span></a>
+              <a href="javascript:void(0);" class="page_link"><span>5</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_next"><span>다음</span></a>
+              <a href="javascript:void(0);" class="arr ico_sprite_end"><span>끝</span></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col_12 justify_content_end spm_t_12">
+              <button type="button" class="btn btn_sm btn_primary">등록</button>
+            </div>
+          </div>
+        </div>
+        <!--// contents_card 비율2 contents -->
+        <!-- contents_card 비율1 contents -->
+        <div class="contents_card col_4">
+          <form>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">권한코드<span class="tit_required"></span></div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="101001" placeholder="내용을 입력해 주세요.">
+                      <button type="button" class="btn btn_sm btn_primary">중복확인</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">권한명<span class="tit_required"></span></div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="보드게임관리자" placeholder="내용을 입력해 주세요.">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">권한레벨<span class="tit_required"></span></div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="시스템관리자" placeholder="내용을 입력해 주세요.">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">기본권한</div>
+                  <div class="cont">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="basic-authority-yes" class="input_radio" name="basic-authority" checked>
+                      <label for="basic-authority-yes">예</label>
+                      <input type="radio" id="basic-authority-no" class="input_radio" name="basic-authority">
+                      <label for="basic-authority-no">아니요</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">특이사항</div>
+                  <div class="cont">
+                    <div class="input_writing_group total_none">
+                      <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력해 주세요."></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">사용여부</div>
+                  <div class="cont">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="authority-use-yes" class="input_radio" name="authority-use" checked>
+                      <label for="authority-use-yes">사용</label>
+                      <input type="radio" id="authority-use-no" class="input_radio" name="authority-use">
+                      <label for="authority-use-no">미사용</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- contents_footer -->
+            <div class="contents_footer">
+              <div class="row">
+                <div class="col col_12">
+                  <div class="col_inner">
+                    <div class="cont cont_scroll cont_no_tit">
+                      <div class="btn_group justify_content_end spm_t_8">
+                        <button type="button" class="btn btn_sm btn_normal">취소</button>
+                        <button type="button" class="btn btn_sm btn_primary">저장</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--// contents_footer -->
+          </form>
+        </div>
+        <!--// contents_card 비율1 contents -->
+      </div>
+      <!--// 비율 레이아웃 ratio_layout-->
+    </div>
+    <!--// contents -->
+  </div>
+  <!--// container -->
+</body>
+<script src="../resources/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../resources/js/common.js"></script>
+</html>

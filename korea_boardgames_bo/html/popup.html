@@ -1,0 +1,844 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코리아보드게임즈_admin</title>
+  <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<!--  서브 페이지 sub_board -->
+<body class="sub_board">
+  <div class="popup_wrap">
+    <h5><a href="#none" class="open_popup1">아이템 검색 - 팝업</a></h5>
+    <h5><a href="#none" class="open_popup2">할인가 등록 - 팝업</a></h5>
+    <h5><a href="#none" class="open_popup3">사용자정의 필드 설정 - 팝업</a></h5>
+    <!-- 240123 엑셀 업로드 팝업 추가 -->
+    <h5><a href="#none" class="open_popup4">엑셀 업로드 - 팝업</a></h5>
+    <!--// 240123 엑셀 업로드 팝업 추가 -->
+    <!-- 240412 이미지 미리보기 팝업 추가 -->
+    <h5><a href="#none" class="open_popup5">이미지 미리보기 - 팝업</a></h5>
+    <div class="contents_card">
+      <div class="image_box open_popup5">
+        <img src="https://picsum.photos/700/900" alt="">
+      </div>
+    </div>
+    <!-- //240412 이미지 미리보기 팝업 추가 -->
+  </div>
+  <!-- modal_ popup -->
+  <!-- 아이템 검색 -->
+  <div class="modal modal_item">
+    <div class="modal_container w_1000">
+      <div class="modal_header">
+        <div class="modal_tit">탈퇴 처리</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+          <div class="modal_content_wrap">
+            <form>
+              <!-- 240123 row 추가 -->
+              <div class="row">
+                <div class="col col_6">
+                  <div class="modal_tit_sub">
+                    <h4>신청내역</h4>
+                  </div>                    
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner"> 
+                    <div class="tit">발송여부</div>
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="send-status-all" class="input_radio" name="send-status" checked>
+                      <label for="send-status-all">전체</label>
+                      <input type="radio" id="send-status-yes" class="input_radio" name="send-status">
+                      <label for="send-status-yes">발송</label>
+                      <input type="radio" id="send-status-none" class="input_radio" name="send-status">
+                      <label for="send-status-none">미발송</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_4">
+                  <div class="col_inner">
+                    <div class="tit">재입고일자<span class="tit_required"></span></div>
+                    <div class="cont">
+                      <div class="input_group input_icon_left">
+                        <input type="text" id="" class="input_text" value="2023-10-01" placeholder="년-월-일">
+                        <i class="ico_sprite_cal ico_24"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_8 justify_content_end">
+                  <button type="button" class="btn btn_sm btn_primary">알림발송</button>
+                </div>
+              </div>
+              <!--// 240123 row 추가 -->
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">아이템코드</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">아이템명</div>
+                    <div class="cont">
+                      <div class="input_group">
+                        <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                        <div class="btn_group spm_t_none">
+                          <button type="button" class="btn btn_sm btn_normal">초기화</button>
+                          <button type="button" class="btn btn_sm btn_primary">조회</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_12">
+                  <div class="col_inner">
+                    <div class="tit">카테고리</div>
+                    <div class="cont">
+                      <div class="select_box tbl_select_box">
+                        <span class="select_box_arr"></span>
+                        <select class="select_box_value" name="" id="">
+                          <option value="">선택</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>     
+                      </div>
+                      <div class="select_box tbl_select_box">
+                        <span class="select_box_arr"></span>
+                        <select class="select_box_value" name="" id="">
+                          <option value="">선택</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>     
+                      </div>
+                      <div class="select_box tbl_select_box">
+                        <span class="select_box_arr"></span>
+                        <select class="select_box_value" name="" id="">
+                          <option value="">선택</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">브랜드</div>
+                    <div class="cont">
+                      <div class="select_box tbl_select_box">
+                        <span class="select_box_arr"></span>
+                        <select class="select_box_value" name="" id="">
+                          <option value="">선택</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col_6">
+                  <div class="col_inner">
+                    <div class="tit">사용구분</div>
+                    <div class="cont">
+                      <div class="select_box tbl_select_box">
+                        <span class="select_box_arr"></span>
+                        <select class="select_box_value" name="" id="">
+                          <option value="">선택</option>
+                          <option value="">Option 1</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                          <option value="">Option 4</option>
+                        </select>     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="tbl_wrap over_y h_195 spm_t_32">
+              <table class="tbl">
+                <caption></caption>
+                <colgroup>
+                  <col style="width:40px">
+                  <col style="width:100px;">
+                  <col style="width:130px">
+                  <col>
+                  <col style="width:180px">
+                  <col style="width:130px">
+                  <col style="width:100px">
+                  <col style="width:80px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>아이템코드</th>
+                    <th>바코드</th>
+                    <th>아이템명</th>
+                    <th>카테고리</th>
+                    <th>브랜드</th>
+                    <th>소비자가</th>
+                    <th>사용구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">2</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">3</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">4</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">5</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal">제거</button>
+              <button type="button" class="btn btn_sm btn_primary">추가</button>
+            </div>
+            <div class="tbl_wrap over_y h_195 spm_t_32">
+              <table class="tbl">
+                <caption></caption>
+                <colgroup>
+                  <col style="width:40px">
+                  <col style="width:100px;">
+                  <col style="width:130px">
+                  <col>
+                  <col style="width:180px">
+                  <col style="width:130px">
+                  <col style="width:100px">
+                  <col style="width:80px">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>NO</th>
+                    <th>아이템코드</th>
+                    <th>바코드</th>
+                    <th>아이템명</th>
+                    <th>카테고리</th>
+                    <th>브랜드</th>
+                    <th>소비자가</th>
+                    <th>사용구분</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="txt_center">1</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">2</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">3</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">4</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                  <tr>
+                    <td class="txt_center">5</td>
+                    <td class="txt_center">IC100001</td>
+                    <td class="txt_center">88123456789123</td>
+                    <td>레디 셋 벳</td>
+                    <td>대분류>중분류>소분류</td>
+                    <td>코리아보드게임</td>
+                    <td class="txt_right">50,000</td>
+                    <td class="txt_center">Y</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal btn_cancel">취소</button>
+              <button type="button" class="btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--// 아이템 검색 -->
+  <!-- 할인가 등록 -->
+  <div class="modal modal_sale">
+    <div class="modal_container w_1000">
+      <div class="modal_header">
+        <div class="modal_tit">할인가 등록</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <div class="modal_content_wrap">
+          <div class="ratio_layout">
+            <!-- 비율2 -->
+            <div class="col_7 spm_r_24">
+              <div class="modal_tit_sub">
+                <h4>할인가 등록이력</h4>
+              </div>
+              <div class="tbl_wrap over_y h_355 spm_t_12">
+                <table class="tbl">
+                  <caption></caption>
+                  <colgroup>
+                    <col style="width:40px">
+                    <col style="width:150px;">
+                    <col style="width:150px">
+                    <col>
+                    <col style="width:80px">
+                    <col style="width:80px">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>NO</th>
+                      <th>시작일자</th>
+                      <th>종료일자</th>
+                      <th>할인구분</th>
+                      <th>할인값</th>
+                      <th>사용여부</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="txt_center">1</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">2</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">3</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">4</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">5</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">6</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">7</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">8</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">9</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                    <tr>
+                      <td class="txt_center">10</td>
+                      <td class="txt_center">2023-10-01 10:00</td>
+                      <td class="txt_center">2023-10-30 22:00</td>
+                      <td>할인율(%)</td>
+                      <td class="txt_right">10</td>
+                      <td class="txt_center">Y</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row">
+                <div class="col col_12 justify_content_end spm_t_12">
+                  <button type="button" class="btn btn_sm btn_primary">등록</button>
+                </div>
+              </div>
+            </div>
+            <!--// 비율2 -->
+            <!-- 비율1 -->
+            <div class="col_4">
+              <div class="modal_tit_sub">
+                <h4>할인가 상세정보</h4>
+              </div>
+              <form>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">상품코드<span class="tit_required"></span></div>
+                      <div class="cont">
+                        <div class="input_group">
+                          <input type="text" id="" class="input_text" value="PRD0001" placeholder="내용을 입력해 주세요." disabled>
+                          <input type="text" id="" class="input_text" value="상품명01" placeholder="내용을 입력해 주세요." >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">판매가<span class="tit_required"></span></div>
+                      <div class="cont">
+                        <div class="input_group">
+                          <input type="text" id="" class="input_text txt_right" value="68,000" placeholder="내용을 입력해 주세요." disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">할인시작<span class="tit_required"></span></div>
+                      <div class="cont">
+                        <div class="input_group input_icon_left">
+                          <input type="text" id="" class="input_text" value="2023-12-22" placeholder="년-월-일">
+                          <input type="text" id="" class="input_text" value="09:00" placeholder="">
+                          <i class="ico_sprite_cal ico_24"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">할인종료</div>
+                      <div class="cont">
+                        <div class="input_group input_icon_left">
+                          <input type="text" id="" class="input_text" value="2024-12-25" placeholder="년-월-일" >
+                          <input type="text" id="" class="input_text" value="23:59" placeholder="">
+                          <i class="ico_sprite_cal ico_24"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">할인방법</div>
+                      <div class="cont">
+                        <div class="input_group">
+                          <div class="select_box tbl_select_box w_m_110">
+                            <span class="select_box_arr"></span>
+                            <select class="select_box_value" name="" id="">
+                              <option value="">할인율(%)</option>
+                              <option value="">Option 1</option>
+                              <option value="">Option 2</option>
+                              <option value="">Option 3</option>
+                              <option value="">Option 4</option>
+                            </select>     
+                          </div>
+                          <input type="text" id="" class="input_text txt_right" value="20" placeholder="내용을 입력해 주세요.">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col col_12">
+                    <div class="col_inner">
+                      <div class="tit">사용여부</div>
+                      <div class="cont">
+                        <div class="input_radio_wrap">
+                          <input type="radio" id="sale-use" class="input_radio" name="sale-use" checked>
+                          <label for="sale-use">사용</label>
+                          <input type="radio" id="sale-none" class="input_radio" name="sale-use">
+                          <label for="sale-none">미사용</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="btn_group pos_ab">
+                  <button type="button" class="btn btn_sm btn_normal btn_cancel">취소</button>
+                  <button type="button" class="btn btn_sm btn_primary">저장</button>
+                </div>
+              </form>
+            </div>
+            <!--// 비율1 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// 할인가 등록 -->
+  <!-- 사용자정의 필드 설정 -->
+  <div class="modal modal_user">
+    <div class="modal_container">
+      <div class="modal_header">
+        <div class="modal_tit">사용자정의 필드 설정</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <form>
+          <div class="modal_content_wrap">
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">Identifier<span class="tit_required"></span></div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요.">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">화면표시명<span class="tit_required"></span></div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요." >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">필드타입</div>
+                  <div class="cont">
+                    <div class="select_box tbl_select_box">
+                      <span class="select_box_arr"></span>
+                      <select class="select_box_value" name="field_type" id="">
+                        <option value="Input">Input</option>
+                        <option value="Textarea">Textarea</option>
+                        <option value="Data">Data</option>
+                        <option value="Data time">Data time</option>
+                        <option value="select">select</option>
+                      </select>     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">그룹코드 사용</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text group_code" value="BOARDCLS" placeholder="내용을 입력해 주세요." disabled>
+                      <input type="text" id="" class="input_text" value="게시판분류" placeholder="내용을 입력해 주세요.">
+                      <button type="button" class="btn btn_sm btn_primary btn_icon"><i class="ico_zoom white ico_24"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">placeholder</div>
+                  <div class="cont">
+                    <div class="input_group">
+                      <input type="text" id="" class="input_text" value="" placeholder="내용을 입력해 주세요." >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">필수입력</div>
+                  <div class="cont">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="user-required-yes" class="input_radio" name="user-required" checked>
+                      <label for="user-required-yes">예</label>
+                      <input type="radio" id="user-required-no" class="input_radio" name="user-required">
+                      <label for="user-required-no">아니요</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">목록표시</div>
+                  <div class="cont">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="user-list-yes" class="input_radio" name="user-list" checked>
+                      <label for="user-list-yes">예</label>
+                      <input type="radio" id="user-list-no" class="input_radio" name="user-list">
+                      <label for="user-list-no">아니요</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col_12">
+                <div class="col_inner">
+                  <div class="tit">검색사용</div>
+                  <div class="cont">
+                    <div class="input_radio_wrap">
+                      <input type="radio" id="user-search-yes" class="input_radio" name="user-search" checked>
+                      <label for="user-search-yes">예</label>
+                      <input type="radio" id="user-search-no" class="input_radio" name="user-search">
+                      <label for="user-search-no">아니요</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn_group justify_content_center">
+              <button type="button" class="btn btn_sm btn_normal btn_cancel">취소</button>
+              <button type="button" class="btn btn_sm btn_primary">확인</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--// 사용자정의 필드 설정 -->
+  <!-- 240123 엑셀 업로드 팝업 추가 -->
+  <div class="modal modal_upload">
+    <div class="modal_container">
+      <div class="modal_header">
+        <div class="modal_tit">엑셀 업로드</div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <form>
+          <div class="modal_content_wrap">
+            <table class="tbl">
+              <caption></caption>
+              <colgroup>
+                <col style="width:40px">
+                <col style="width:60px;">
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>상태</th>
+                  <th>사유</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="txt_center">1</td>
+                  <td class="txt_center">성공</td>
+                  <td>테스트 데이터 입니다.</td>
+                </tr>
+                <tr>
+                  <td class="txt_center">2</td>
+                  <td class="txt_center">실패</td>
+                  <td>테스트 데이터 입니다.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="txt_noti">성공:<span>0</span> / 실패:<span>0</span></p>
+            <div class="image_box">
+              <div class="image_box_upload">이 곳에 파일을 넣으세요</div>
+              <input type="hidden" class="image_file" name="" value="" accept="image/*">
+            </div>
+            <p class="txt_danger">EXCEL 파일만 등록할 수 있습니다.</p>
+            <div class="btn_group justify_content_end">
+              <button type="button" class="btn btn_sm btn_primary">등록</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--// 240123 엑셀 업로드 팝업 추가 -->
+
+  <!-- 240412 이미지 미리보기 팝업 추가 -->
+  <div class="modal modal_imgView">
+    <div class="modal_container w_1000">
+      <div class="modal_header">
+        <div class="modal_tit"></div>
+        <button type="button" class="close_modal"><i class="ico_close ico_24"></i></button>
+      </div>
+      <div class="modal_content">
+        <div class="img">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// 240412 이미지 미리보기 팝업 추가 -->
+
+  <!--// modal_ popup -->
+</body>
+<!--// 서브 페이지 sub_board -->
+
+<script src="../resources/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="../resources/js/jquery-ui.js" type="text/javascript"></script>
+<script src="../resources/js/common.js"></script>
+<script>
+  //모달팝업
+  $(function(){
+    $('.open_popup1').click(function(){
+      $('.modal_item').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.open_popup2').click(function(){
+      $('.modal_sale').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.open_popup3').click(function(){
+      $('.modal_user').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    //240123 엑셀 업로드 팝업 추가
+    $('.open_popup4').click(function(){
+      $('.modal_upload').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    //240412 이미지 미리보기 팝업 추가
+    $('.open_popup5').click(function(){
+      $('.modal_imgView').fadeIn(300);
+      $('body.sub_board').addClass('modal_open');
+    });
+
+    $('.close_modal, .btn_cancel').on('click', function(){
+      $(this).parents('.modal').fadeOut(300);
+      $('.modal').fadeOut(300);
+      $('body.sub_board').removeClass('modal_open');
+    });
+  });
+
+  //필드타입 셀렉트박스 선택시 그룹코드 활성화
+  $(function() {
+    $("select[name='field_type']").change(function () {
+      var field_type = this.value;
+      if(field_type == "select"){
+        $(".group_code").prop('disabled',false);
+      }else{
+        $(".group_code").prop('disabled',true);
+      }
+    });
+  });
+</script>
+</html>
