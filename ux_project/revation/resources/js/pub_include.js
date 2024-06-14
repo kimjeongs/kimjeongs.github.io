@@ -12,7 +12,8 @@ var include = {
   },
   styles: function () {
     document.write(
-      '<link rel="stylesheet" href="' + baseURL + '/css/swiper.min.css" type="text/css" />'
+      // '<link rel="stylesheet" href="' + baseURL + '/css/swiper.min.css" type="text/css" />'
+      '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>'
     );
     document.write(
       '<link rel="stylesheet" href="' + baseURL + '/css/style.css" type="text/css" />'
@@ -21,10 +22,11 @@ var include = {
   scripts: function () {
     // library js
     document.write(
-      '<script src="' + baseURL + '/js/jquery-3.6.0.min.js"></script>'
+      '<script src="' + baseURL + '/js/jquery-3.7.1.min.js"></script>'
     );
     document.write(
-      '<script src="' + baseURL + '/js/swiper.min.js"></script>'
+      // '<script src="' + baseURL + '/js/swiper.min.js"></script>'
+      '<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>'
     );
     document.write(
       '<script src="' + baseURL + '/js/gsap.min.js"></script>'

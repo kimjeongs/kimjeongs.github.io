@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gsap 스터디</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- js -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- plugin -->
-  <script src="js/plugin/splitting.min.js"></script>
-  <script src="js/plugin/scrolla.jquery.min.js"></script>
-  <script src="js/script.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -76,6 +70,143 @@
       <div class="scroll">ScrollDown</div>
     </section>
     <!-- //visual -->
+
+    <!-- con01 -->
+    <section class="con01">
+      <div class="videoWrap">
+        <video autoplay="" muted="" loop="" playinline="" >
+          <source src="images/about_pc.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="title en">
+        <h2><span class="en2">Creativeness</span> is all you need <br> for <span class="en2">digital design</span></h2>
+      </div>
+    </section>
+
+    <!-- con02 -->
+    <section class="con02">
+      <div class="title en">
+        <p class="a">My</p>
+        <p class="b en2">Work</p>
+      </div>
+      <ul class="worklist">
+        <li>
+          <a href="#">
+            <div class="imgBox">
+              <img src="images/work1.jpg" alt="">
+            </div>
+            <div class="textBox">
+              <h3>Site name</h3>
+              <div class="info">
+                <p>UX/UI Design, Web Publishing</p>
+                <p>2024</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="imgBox">
+              <img src="images/work2.jpg" alt="">
+            </div>
+            <div class="textBox">
+              <h3>Site name</h3>
+              <div class="info">
+                <p>UX/UI Design, Web Publishing</p>
+                <p>2024</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="imgBox">
+              <img src="images/work3.jpg" alt="">
+            </div>
+            <div class="textBox">
+              <h3>Site name</h3>
+              <div class="info">
+                <p>UX/UI Design, Web Publishing</p>
+                <p>2024</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="imgBox">
+              <img src="images/work4.jpg" alt="">
+            </div>
+            <div class="textBox">
+              <h3>Site name</h3>
+              <div class="info">
+                <p>UX/UI Design, Web Publishing</p>
+                <p>2024</p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- con03 scrolla로 스크롤 반응 -->
+    <section class="con03 animate" data-animate="motion"><!-- scrolla js : 스크롤 될때 반응 calss="animate" data-animate="motion" -->
+      <div class="textWrap">
+        <div class="title en">
+          <p>My <span class="en2">Skill</span></p>
+          <ul>
+            <li><p>Photoshop</p></li>
+            <li class="en2"><p>Figma</p></li>
+            <li><p>html/css</p></li>
+            <li class="en2"><p>Javascript</p></li>
+            <li><p>Jquery</p></li>
+            <li class="en2"><p>React</p></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="list">
+        <li><img src="images/img1.jpg" alt=""></li>
+        <li><img src="images/img2.jpg" alt=""></li>
+        <li><img src="images/img3.jpg" alt=""></li>
+        <li><img src="images/img4.jpg" alt=""></li>
+        <li><img src="images/img5.jpg" alt=""></li>
+        <li><img src="images/img6.jpg" alt=""></li>
+        <li><img src="images/img7.jpg" alt=""></li>
+      </ul>
+      <div class="btnWrap">
+        <a href="#">
+          <img src="images/readMore1.png" alt="">
+          <img src="images/readMore2.png" alt="">
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="textWrap en">
+        <p class="title">Want to <span class="en2">work together?</span></p>
+        <p class="contact en2">Contct</p>
+        <p><a href="#mailto:abc@nate.com">abc@nate.com</a></p>
+      </div>
+      <div class="bottom en">
+        <ul class="sns">
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">instagram</a></li>
+        </ul>
+        <p class="copyright">j.young &#169;2023</p>
+      </div>
+    </footer>
+
+
   </div>
+
+  <!-- plugin -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/plugin/splitting.min.js"></script>
+  <script src="js/plugin/scrolla.jquery.min.js"></script>
+  <script src="js/plugin/jquery.simplyscroll.min.js"></script>
+  <!-- js -->
+  <script src="js/script.js"></script>
 </body>
 </html>

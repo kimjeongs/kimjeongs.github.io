@@ -21,7 +21,7 @@ var include = {
   scripts: function () {
     // library js
     document.write(
-      '<script src="' + baseURL + '/js/jquery-3.6.0.min.js"></script>'
+      '<script src="' + baseURL + '/js/jquery-3.7.1.min.js"></script>'
     );
     document.write(
       '<script src="' + baseURL + '/js/swiper.min.js"></script>'
