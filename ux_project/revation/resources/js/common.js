@@ -106,6 +106,21 @@ $(function() {
   .to('.we_are .cont p', {x:0, opacity:1, duration:1},.5)
   .to('.we_are .cont .hashtag li', {scale:1, opacity:1, duration:.7},1) //랜덤하기
 
+
+  ScrollTrigger.matchMedia({
+    "(max-width: 768px)": function() {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '.aboutus .logo',
+          start: 'top top', 
+          end: '+=2000 bottom',
+          scrub: 1,
+        }
+      })
+      .to('.aboutus .cover', { width: '400vw', height: '400vw', ease: 'none', duration: 5 });
+    }
+  });
+
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.matchMedia({
     // desktop
@@ -147,8 +162,6 @@ $(window).on('resize',function(){
 $(window).on('scroll',function(){
   let scroll = $(this).scrollTop();
   activeBtn(scroll);//버튼활성화
-
-
 })
 
 //버튼 클릭시
@@ -167,9 +180,10 @@ function variable(){
     navi_li = $('.nav_menu li');
     body = $('body,html');
     topHeader = $('#header');
-    dist = -200;
+    dist = 0;
     len = wrap_div.length;
 }
+
 
 //div 좌표 구하기
 function savePos(){
@@ -180,12 +194,26 @@ function savePos(){
         divArr.push(divTop)
     }
     divArr.push(wrap_div.last().offset().top+wrap_div.last().height());
+
 }
+
+let totalWidth = 0;
+    $('.system .scroll').each(function() {
+        totalWidth += $(this).outerWidth();
+    });
+for (let i = 3; i < divArr.length; i++) {
+  divArr[i] += totalWidth*1.8;
+}
+console.log(divArr)
+
 
 //버튼활성화
 function activeBtn(scroll){
     navi_li.removeClass('active');
     wrap_div.removeClass('active');
+    if(scroll >= divArr[divArr.length-2]) {
+      navi_li.eq(divArr.length-2).addClass('active');
+    }
     for(let i=0; i<len; i++){
         if(scroll < divArr[0]) {
           navi_li.eq(0).addClass('active');
@@ -204,13 +232,15 @@ function activeBtn(scroll){
 
         if(scroll >= divArr[i]+dist && scroll < divArr[i+1]+dist){
           navi_li.eq(i).addClass('active');
+
           if(wrap_div.eq(i).hasClass('light')) {
             navi_li.parents('.nav_menu').addClass('dark');
           } else {
             navi_li.parents('.nav_menu').removeClass('dark');
           }
       }
-        
+
+      
     }
     
 }
@@ -222,19 +252,6 @@ function naviClick(i){
     });
 }
 
-
-//process
-gsap.timeline({
-  scrollTrigger: {
-    trigger: '.process',
-    start: 'top top', 
-    end: 'bottom bottom',
-    // markers: true,
-  }
-})
-.to('.process .cont strong', {x:0, opacity:1, duration:1},0)
-.to('.we_are .cont p', {x:0, opacity:1, duration:1},.5)
-.to('.we_are .cont .hashtag li', {scale:1, opacity:1, duration:.7},1) //랜덤하기
 
 
 //시스템
@@ -311,6 +328,18 @@ function init(){
 init();
 
 
-
-
+//ir cont
+let motionright = $('.motion_right .ir');
+gsap.utils.toArray(motionright).forEach(function(motionright){
+    gsap.timeline({
+      scrollTrigger :{
+        trigger:motionright,
+        start:'-500 top',
+        toggleClass: {'targets':motionright, className:'active'},
+        // scrub:true,
+        stagger:1,
+      }
+    })
+  })
 })
+
