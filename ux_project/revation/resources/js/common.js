@@ -211,14 +211,19 @@ console.log(divArr)
 function activeBtn(scroll){
     navi_li.removeClass('active');
     wrap_div.removeClass('active');
-    if(scroll >= divArr[divArr.length-2]) {
-      navi_li.eq(divArr.length-2).addClass('active');
+    
+    if($('.main_top')) {
+      if(scroll >= divArr[divArr.length-2]) {
+        navi_li.eq(divArr.length-2).addClass('active');
+      }
     }
     for(let i=0; i<len; i++){
-        if(scroll < divArr[0]) {
-          navi_li.eq(0).addClass('active');
-          topHeader.removeClass('dark');
-          navi_li.parents('.nav_menu').addClass('dark');
+        if($('.main_top')) {
+          if(scroll < divArr[0]) {
+            navi_li.eq(0).addClass('active');
+            topHeader.removeClass('dark');
+            navi_li.parents('.nav_menu').addClass('dark');
+          }
         }
         if(scroll >= divArr[i] && scroll < divArr[i+1]){
             

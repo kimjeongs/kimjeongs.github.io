@@ -4,6 +4,8 @@
     <script src="../resources/js/pub_include.js"></script>
     <script>include.meta();</script>
     <script>include.title();</script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" rel="stylesheet">
     <script>include.styles();</script>
   </head>
 
@@ -48,7 +50,7 @@
 
   <!-- container -->
   <main id="container" class="container">
-    <nav class="nav_menu">
+    <nav class="nav_menu dark">
       <ul>
         <li class="active"><a href="#process"><span>PROCESS</span></a></li>
         <li><a href="#strategy"><span>STRATEGY</span></a></li>
@@ -59,7 +61,7 @@
     </nav>
     <div class="content sub">
       <section id="process" class="process light">
-        <div class="w1560">
+        <div class="inner">
           <div class="center-box">
             <h4>
               <img src="../resources/images/RESTUDIO LOGO.svg" alt="RESTUDIO LOGO">
@@ -183,259 +185,259 @@
             </div>
           </div	>
         </div>	
-      </section>
-      <section class="value">
-        <div class="w1560">
-          <div class="circle-wrap">
+        <section class="value light">
+          <div class="inner">
+            <div class="circle-wrap">
+              <div class="sec_tit">
+                <span>OUR VALUES</span>
+                <h4>Our Strong point</h4>
+              </div>
+              <ul>
+                <li>
+                  <span>01.</span>
+                  <dl>
+                    <dt>TIME</dt>
+                    <dd>Reduce product development time</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>02.</span>
+                  <dl>
+                    <dt>COST REDUCTION</dt>
+                    <dd>One-stop solution reduces development staffing</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>03.</span>
+                  <dl>
+                    <dt>CUSTOMIZATION</dt>
+                    <dd>Specialized products with customer needs</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>04.</span>
+                  <dl>
+                    <dt>QUALITY</dt>
+                    <dd>Stability and reliability for mass production through quality control</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <div class="circle-wrap pb180">
+              <div class="sec_tit">
+                <span>OUR DIFFERENTIATION</span>
+                <h4>WHY RESTUDIO</h4>
+              </div>
+              <ul>
+                <li>
+                  <span>01.</span>
+                  <dl>
+                    <dt>Consulting</dt>
+                    <dd>Determining possibility of commercialization potential at the conception stage</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>02.</span>
+                  <dl>
+                    <dt>Design</dt>
+                    <dd>Deriving aesthetic design excellence</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>03.</span>
+                  <dl>
+                    <dt>Material specialty</dt>
+                    <dd>Having experts in eco-friendly raw materials</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>04.</span>
+                  <dl>
+                    <dt>Supply of eco-friendly materials</dt>
+                    <dd>Possible to supply practical eco-friendly materials</dd>
+                  </dl>
+                </li>
+                <li>
+                  <span>05.</span>
+                  <dl>
+                    <dt>Manufacturing Systems</dt>
+                    <dd>Building manufacturing network systems</dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="work">
+          <div class="inner">
             <div class="sec_tit">
-              <span>OUR VALUES</span>
-              <h4>Our Strong point</h4>
+              <span>OUR SCOPE OF WORK</span>
+              <h4>RESTUDIO SERVICE</h4>
             </div>
-            <ul>
-              <li>
-                <span>01.</span>
-                <dl>
-                  <dt>TIME</dt>
-                  <dd>Reduce product development time</dd>
-                </dl>
-              </li>
-              <li>
-                <span>02.</span>
-                <dl>
-                  <dt>COST REDUCTION</dt>
-                  <dd>One-stop solution reduces development staffing</dd>
-                </dl>
-              </li>
-              <li>
-                <span>03.</span>
-                <dl>
-                  <dt>CUSTOMIZATION</dt>
-                  <dd>Specialized products with customer needs</dd>
-                </dl>
-              </li>
-              <li>
-                <span>04.</span>
-                <dl>
-                  <dt>QUALITY</dt>
-                  <dd>Stability and reliability for mass production through quality control</dd>
-                </dl>
-              </li>
-            </ul>
           </div>
-          <div class="circle-wrap pb180">
-            <div class="sec_tit">
-              <span>OUR DIFFERENTIATION</span>
-              <h4>WHY RESTUDIO</h4>
+          <div class="area" data-aos="fade-in" data-aos-anchor-placement="top-center">
+            <div class="inner">
+              <div class="line line01">
+                <div class="flex-box">
+                  <div class="tit">
+                    <h6>BUSINESS AREA</h6>
+                  </div>
+                  <div class="wide">
+                    <ul>
+                      <li>
+                        <p>Solution Proposal</p>
+                        <span><!-- 솔루션 제안 --></span>
+                      </li>
+                      <li>
+                        <p>Design Strategy Planning</p>
+                        <span><!-- 디자인 전략기획 --></span>
+                      </li>
+                      <li>
+                        <p>Color Material Finishing Development</p>
+                        <span><!-- CMF 개발 --></span>
+                      </li>
+                      <li>
+                        <p>Design Development</p>
+                        <span><!-- 디자인 개발 --></span>
+                      </li>
+                      <li>
+                        <p>Product Mockup</p>
+                        <span><!-- 제품 목업 --></span>
+                      </li>
+                      <li>
+                        <p>Product Manufacturing</p>
+                        <span><!-- 제품 제조 --></span>
+                      </li>
+                      <li>
+                        <p>Product Acceptance And Delivery</p>
+                        <span><!-- 제품 검수 및 납품 --></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="line line02">
+                <div>
+                  <h6>DESIGN AREA</h6>
+                </div>
+                <div class="flex-box">
+                  <div>
+                    <ul>
+                      <li>
+                        <p>Identity</p>
+                        <span>Branding</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>B.I</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>C.I</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <p>Packaging</p>
+                        <span>New Line Design</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Renewal Design</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Artwork Development</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <p>Add</p>
+                        <span>Modeling, Rendering</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Design Mockup</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Product Photography</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="line line03">
+                <div>
+                  <h6>MANUFACTURING AREA</h6>
+                </div>
+                <div class="flex-box">
+                  <div>
+                    <ul>
+                      <li>
+                        <p>Process</p>
+                        <span>Mechanical Engineer</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Mold Making</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Prototyping</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Manufacturing, QC</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Forwarding</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="wide">
+                    <ul class="third">
+                      <li>
+                        <p>Material Type</p>
+                        <span>Packaging</span>
+                        <span>Papermold</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Bioplastic</span>
+                        <span>Wood Composite</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span></span>
+                        <span>Limestone Composite</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Recycle</span>
+                        <span>PCR/PIR</span>
+                      </li>
+                      <li>
+                        <p></p>
+                        <span>Upcycle</span>
+                        <span>*Individual Inquiry</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            <ul>
-              <li>
-                <span>01.</span>
-                <dl>
-                  <dt>Consulting</dt>
-                  <dd>Determining possibility of commercialization potential at the conception stage</dd>
-                </dl>
-              </li>
-              <li>
-                <span>02.</span>
-                <dl>
-                  <dt>Design</dt>
-                  <dd>Deriving aesthetic design excellence</dd>
-                </dl>
-              </li>
-              <li>
-                <span>03.</span>
-                <dl>
-                  <dt>Material specialty</dt>
-                  <dd>Having experts in eco-friendly raw materials</dd>
-                </dl>
-              </li>
-              <li>
-                <span>04.</span>
-                <dl>
-                  <dt>Supply of eco-friendly materials</dt>
-                  <dd>Possible to supply practical eco-friendly materials</dd>
-                </dl>
-              </li>
-              <li>
-                <span>05.</span>
-                <dl>
-                  <dt>Manufacturing Systems</dt>
-                  <dd>Building manufacturing network systems</dd>
-                </dl>
-              </li>
-            </ul>
           </div>
-        </div>
+        </section>
       </section>
-      <section>
-        <div class="w1560">
-          <div class="sec_tit">
-            <span>OUR SCOPE OF WORK</span>
-            <h4>RESTUDIO SERVICE</h4>
-          </div>
-          
-        </div>
-        <div class="area green-bg pt120" data-aos="fade-in" data-aos-anchor-placement="top-center">
-          <div class="w1560">
-            <div class="line line01">
-              <div class="flex-box">
-                <div class="tit">
-                  <h6>BUSINESS AREA</h6>
-                </div>
-                <div class="wide">
-                  <ul>
-                    <li>
-                      <p>Solution Proposal</p>
-                      <span><!-- 솔루션 제안 --></span>
-                    </li>
-                    <li>
-                      <p>Design Strategy Planning</p>
-                      <span><!-- 디자인 전략기획 --></span>
-                    </li>
-                    <li>
-                      <p>Color Material Finishing Development</p>
-                      <span><!-- CMF 개발 --></span>
-                    </li>
-                    <li>
-                      <p>Design Development</p>
-                      <span><!-- 디자인 개발 --></span>
-                    </li>
-                    <li>
-                      <p>Product Mockup</p>
-                      <span><!-- 제품 목업 --></span>
-                    </li>
-                    <li>
-                      <p>Product Manufacturing</p>
-                      <span><!-- 제품 제조 --></span>
-                    </li>
-                    <li>
-                      <p>Product Acceptance And Delivery</p>
-                      <span><!-- 제품 검수 및 납품 --></span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="line line02">
-              <div>
-                <h6>DESIGN AREA</h6>
-              </div>
-              <div class="flex-box">
-                <div>
-                  <ul>
-                    <li>
-                      <p>Identity</p>
-                      <span>Branding</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>B.I</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>C.I</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul>
-                    <li>
-                      <p>Packaging</p>
-                      <span>New Line Design</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Renewal Design</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Artwork Development</span>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <ul>
-                    <li>
-                      <p>Add</p>
-                      <span>Modeling, Rendering</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Design Mockup</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Product Photography</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="line line03">
-              <div>
-                <h6>MANUFACTURING AREA</h6>
-              </div>
-              <div class="flex-box">
-                <div>
-                  <ul>
-                    <li>
-                      <p>Process</p>
-                      <span>Mechanical Engineer</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Mold Making</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Prototyping</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Manufacturing, QC</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Forwarding</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="wide">
-                  <ul class="third">
-                    <li>
-                      <p>Material Type</p>
-                      <span>Packaging</span>
-                      <span>Papermold</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Bioplastic</span>
-                      <span>Wood Composite</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span></span>
-                      <span>Limestone Composite</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Recycle</span>
-                      <span>PCR/PIR</span>
-                    </li>
-                    <li>
-                      <p></p>
-                      <span>Upcycle</span>
-                      <span>*Individual Inquiry</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="strategy" class="pt120 pb180 offset">
-        <div class="w1560">
+      
+      <section id="strategy" class="light">
+        <div class="inner">
           <div class="sec-wrap">
             <div class="sec_tit">
               <span>OUR STRATEGY</span>
@@ -445,7 +447,7 @@
               <p>REVATION presents new sustainable strategies to match changing ESG management trends.</p>
             </div>
           </div>
-          <div class="circle-box mt80">
+          <div class="circle-box">
             <div class="circle">
               <div class="grid-box">
                 <div class="grid grid1">
@@ -515,13 +517,13 @@
             </div>
           </div>
           <div class="center">
-            <a href="/en/sub/company/esg.asp" class="radius-btn">Find out REVATION's ESG</a>
+            <a href="/en/sub/company/esg.asp" class="btn_round type2">Find out REVATION's ESG</a>
           </div>
         </div>
       </section>
-      <section id="network" class="pb180 offset">
-        <div class="w1560">
-          <div class="sec-wrap mb80">
+      <section id="network" class="light">
+        <div class="inner">
+          <div class="sec-wrap">
             <div class="sec_tit">
               <span>OUR NETWORK</span>
               <h3>Global Network</h3>
@@ -535,8 +537,8 @@
           </figure>
         </div>
       </section>
-      <section class="clean">
-        <div class="w1560">
+      <section class="clean light">
+        <div class="inner">
           <div class="sec-wrap">
             <div class="sec_tit">
               <span>OUR GROWTH</span>
@@ -547,201 +549,202 @@
             </div>
           </div>
         </div>
-        <div id="client" class="green-bg pt80 pb80">
-          <div class="w1560">
-            <h3>Clients</h3>
-            <p>We are considering and cooperating with our partners who are leading ESG management on the "sustainability" strategy.</p>
+        <div id="client">
+          <div class="inner">
+            <div class="sec_tit">
+              <h3>Clients</h3>
+              <p>We are considering and cooperating with our partners who are leading ESG management on the "sustainability" strategy.</p>
+            </div>
             <ul>
-            
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-11(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-11(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-53(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-53(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-56(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-56(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-52(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-52(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-19(2).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-19(2).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-16(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-16(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-54(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-54(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-17(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-17(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-24(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-24(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-10(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-10(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-18(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-18(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-27(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-27(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-35-35(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-35-35(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-55(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-55(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-25(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-25(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-34(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-34(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-33(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-33(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-12(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-12(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-22(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-22(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-57(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-57(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-23(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-23(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-13(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-13(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-14(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-14(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-15(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-15(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-20(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-20(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-28(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-28(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-21(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-21(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-29(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-29(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-30(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-30(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-58-58.svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-58-58.svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-26(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-26(0).svg" alt="">
                 </figure>
               </li>
             
               <li>
                 <figure>
-                  <img src="/upload/홈페이지 소스제작_client_20240131-31(0).svg" alt="">
+                  <img src="../resources/images/홈페이지 소스제작_client_20240131-31(0).svg" alt="">
                 </figure>
               </li>
             
@@ -864,29 +867,29 @@
           </div>
         </div>
       </section>
-      <section id="awards" class="pt120 offset">
-        <div class="w1560">
+      <section id="awards" class="light">
+        <div class="inner">
           <div class="line">
-            <h2>Partners</h2>
+            <div class="sec_tit">
+              <h3>Partners</h3>
+            </div>
             <ul>
-            
               <li>
                 <dl>
                   <dt>LG SUPERSTART</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-01(0).png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-01(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
               </li>
-            
               <li>
                 <dl>
                   <dt>SK TELECOM</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-02(0).png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-02(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -897,7 +900,7 @@
                   <dt>YUHAN KIMBERLY</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-06(0).png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-06(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -908,7 +911,7 @@
                   <dt>HANYANG UNIVERSITY</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-07(0).png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-07(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -919,114 +922,25 @@
                   <dt>KIDP</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-51(0).png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-51(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
               </li>
             
-              <!--<li>
-                <dl>
-                  <dt>LG 슈퍼스타트</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo01.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>SK 텔레콤</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo02.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>한국투자액셀러레이터</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo03.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>유한킴벌리</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo04.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>HYU HOLDINGS</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo05.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>유한킴벌리</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo06.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>한양대학교 기술지주</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo07.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>에스큐빅엔젤스</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo08.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>프리즘청년창업</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/partner_logo09.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>-->
             </ul>
           </div>
           <div class="line">
-            <h2>Certificates</h2>
+            <div class="sec_tit">
+              <h3>Certificates</h3>
+            </div>
             <ul>
-            
               <li>
                 <dl>
                   <dt>VENTURE ENTERPRISE  CERTIFICATION (INNOGROW)</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-36-36.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-36-36.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1037,7 +951,7 @@
                   <dt>CERTIFIED AS AN INDUSTRIALDESIGN COMPANY</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-37.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-37.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1048,7 +962,7 @@
                   <dt>CERTIFIED AS COMPANY-AFFILIATED RESEARCH INSTITUTE</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-38.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-38.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1059,7 +973,7 @@
                   <dt>SMALL BUSINESS VERIFICATION CERTIFICATION</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/certi_logo04(0).png" alt="">
+                      <img src="../resources/images/certi_logo04(0).png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1070,7 +984,7 @@
                   <dt>FSC PACKAGING CERTIFICATION COMPANY</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-42.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-42.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1081,7 +995,7 @@
                   <dt>ISO 9001 CERTIFIED COMPANY, REVATION</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-40.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-40.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1092,94 +1006,24 @@
                   <dt>ISO 14001 CERTIFIED COMPANY, REVATION</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-41.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-41.png" alt="">
                     </figure>
                   </dd>
                 </dl>
               </li>
-            
-              <!--<li>
-                <dl>
-                  <dt>벤처 기업 인증 (혁신성장유형)</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo01.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>산업디자인 전문회사 인증</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo02.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>기업부설 연구소 인증</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo03.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>중소기업 확인</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo04.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>ISO 9001 인증기업</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo05.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>ISO 14001 인증기업</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo06.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>FSC 인증기업</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/certi_logo07.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>-->
             </ul>
           </div>
           <div class="line">
-            <h2>Awards</h2>
+            <div class="sec_tit">
+              <h3>Awards</h3>
+            </div>
             <ul>
-            
               <li>
                 <dl>
                   <dt>2023 RED DOT DESIGN AWARD, GERMANY</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-46.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-46.png" alt="">
                     </figure>
                   </dd>
                 </dl>
@@ -1190,32 +1034,11 @@
                   <dt>EXCELLENT DESIGN (THE MINISTRY OF TRADE)</dt>
                   <dd>
                     <figure>
-                      <img src="/upload/홈페이지 소스제작_client_20240131-47-47.png" alt="">
+                      <img src="../resources/images/홈페이지 소스제작_client_20240131-47-47.png" alt="">
                     </figure>
                   </dd>
                 </dl>
-              </li>
-            
-              <!--<li>
-                <dl>
-                  <dt>독일 레드닷 어워드</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/award_logo01.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>
-              <li>
-                <dl>
-                  <dt>우수디자인 (산업통상자원부선정)</dt>
-                  <dd>
-                    <figure>
-                      <img src="../resources/images/award_logo02.png" alt="">
-                    </figure>
-                  </dd>
-                </dl>
-              </li>-->
+              </li>            
             </ul>
           </div>
         </div>
@@ -1328,7 +1151,18 @@
 <div></div>
 
 <!-- script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>include.scripts();</script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  AOS.init({
+    once : true,
+    throttleDelay : 99,
+    duration: 1000,
+  });
+</script>
+
 <script>
   $(function(){
     //step scroll
@@ -1374,6 +1208,54 @@
     }
   });
 </script>	
+
+<script>
+  
+	$(function(){
+		//step scroll
+		$(window).on("load scroll resize", function(){
+			const st = $("body, html").scrollTop();
+			const height = $(".step-box").outerHeight(true) - ($(".step-box .first .dot").outerHeight(true) / 2);
+			
+			if(st >= 0){
+				if(st >= height){
+					$(".step-box .scroll").css("top", height - 1);
+				}else{
+					$(".step-box .scroll").css("top", st);
+				}
+			}
+		});
+
+		//circle
+		let deg = 0;
+		let speed = 1500;
+		$("#strategy .circle, #strategy .grid").css("transition-duration", speed + "ms");
+
+		$("#strategy .txt-wrap").slick({
+			slidesToShow: 1,
+			dots: false,
+			arrows: false,
+			fade: true,
+			speed: speed,
+			draggable: false,
+			autoplay: true,
+			autoplaySpeed: 3000,
+			pauseOnFocus: false,
+			pauseOnHover: false,
+		}).on("beforeChange", function(e, slick, current, next){
+			rotate();
+		});
+
+		function rotate(){
+			const length = $("#strategy .grid-box .grid").length;
+			const rotateDeg = 360 / length;
+			deg += rotateDeg
+			$("#strategy .circle").css("transform", `rotate(${deg}deg)`);
+			$("#strategy .grid").css("transform", `rotate(-${deg}deg)`);
+		}
+	});
+
+</script>
 
 </body>
 </html>
