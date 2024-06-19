@@ -126,10 +126,10 @@ $(function() {
 //메인 sns 스와이퍼
 function view4Swiper() {
   let view4Swiper = new Swiper(".view4_swiper", {
-    slidesPerView: 4,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 16,
     loop: false,
-    spaceBetween : 40,
-    slidesPerGroup: 4,
     followFinger : false,
     observer: true,
     observeParents: true,
@@ -139,9 +139,9 @@ function view4Swiper() {
     },
     breakpoints: {        
         768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 16,
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween : 40,
         }
     },
   });
