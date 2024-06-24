@@ -189,6 +189,10 @@ $(function() {
   });
 
   //sec02 비디오 
+  ScrollTrigger.matchMedia({
+    "(min-width: 1200px)": function(){
+
+
   gsap.set(sec02Viedo, {
     transformOrigin:'70.5% center'
   });
@@ -204,7 +208,7 @@ $(function() {
     scrub: 1.8,
     pin: true,
     anticipatePin: 1,
-    markers:true,
+    // markers:true,
   });
 
   //sec02 텍스트
@@ -233,7 +237,8 @@ $(function() {
     color: "#F8F8F4",
     autoAlpha:1,
   });
-
+}
+})
 
   // sec03 ----------------------------------------------------------------
   const sec03 = $('.sec03');
@@ -301,32 +306,102 @@ $(function() {
 
   const moveTxt = gsap.timeline();
   moveTxt.from(".sec06 .t1", {xPercent:-100,duration:1},"m1")
-      .from(".sec06 .t2", {xPercent:100,duration:1},"m1")
-      .to(fixTxt,{color:"#fff"},3)
-      .to(sec06,{background:"#000"},3)
-
+          .from(".sec06 .t2", {xPercent:100,duration:1},"m1")
+      
   ScrollTrigger.create({
     animation:moveTxt,
-    trigger:fixWrap,
+    trigger:sec06,
     top:"top top",
-    end:"30% top",
+    end:"10% 10%",
     scrub:1,
-    markers: false,
+    // markers:true,
   })    
 
-  gsap.to(fixWrap, {
-    scrollTrigger: {
-      trigger:fixWrap,
-      end:"+=2000",
-      scrub: true,
-      pin: true,
-      pinSpacing:false,
-      anticipatePin: 1,
-      markers:true,
-    },
+  const moveTxt2 = gsap.timeline();
+  moveTxt2.to(fixTxt,{color:"#fff"},3) 
+          .to(sec06,{background:"#000"},3)   
+
+  ScrollTrigger.create({
+    animation:moveTxt2,
+    trigger:sec06,
+    top:"top 30%",
+    end:"10% 30%",
+    scrub:1,
+    // markers:true,
   })
 
+  gsap.timeline({ 
+    scrollTrigger: {
+        trigger: sec06,
+        start: '70% 100%',
+        end: 'top bottom',
+        scrub: 1,
+        // markers:true,
+    }
+})
+
+.fromTo('.sec06 .fix_txt',{y: '3.65vw'},{y: '0',ease: 'none',duration: 2},5.5)
+.fromTo('.sec06 .btn_area',{opacity: 0,y: '100%'},{opacity: 1,y: '0%',ease: 'none',duration: 2},6)
   
+gsap.to(fixWrap, {
+  scrollTrigger: {
+    trigger:fixWrap,
+    // top:"top top",
+    end:"+=3000",
+    scrub: true,
+    pin: true,
+    pinSpacing:false,
+    anticipatePin: 1,
+    // markers:true,
+  },
+})
+
+gsap.timeline({
+  scrollTrigger: {
+      trigger: sec06,
+      start: 'top 20%',
+      scrub: 1
+  }
+})
+.fromTo('.sec06 .text_wrap .title_1',{y: '15.63vw'},{y: '0px',ease: 'none',duration: 8},10)
+.fromTo('.sec06 .text_wrap .title_2',{y: '15.63vw'},{y: '0px',ease: 'none',duration: 6},10)
+.fromTo('.sec06 .text_wrap .title_3',{y: '15.63vw'},{y: '0px',ease: 'none',duration: 10},10)
+.fromTo('.sec06 .text_wrap .halfCircle',{rotation: 0},{rotation: 360,ease: 'none',duration: 10},10);
+
+
+// sec07
+gsap.to('.marquee__inner', {xPercent: -100, repeat: -1, duration: ($('.marquee__inner').outerWidth() * 0.02 / 2), ease: 'linear'}).totalProgress(0.5);
+gsap.set('.marquee__inner', {xPercent: -100});
+
+
+// 페이지 덮이기
+gsap.utils.toArray('.target_cont').forEach((target, i) => {
+  ScrollTrigger.create({
+      trigger: target,
+      start: 'top top',
+      pin: true, 
+      pinSpacing: false
+  });
+});
+
+gsap.timeline({
+  scrollTrigger: {
+      trigger: '.sec07 .cont_2',
+      start: 'top 100%',
+      scrub: 1
+  }
+})
+.fromTo('.sec07 .cont_2',{opacity: 0.5},{opacity: 1,ease: 'none',duration: 5},0)
+.fromTo('.sec07 .cont_2 .subText',{y: '15.63vw'},{y: '0',ease: 'none',duration: 5},3)
+.fromTo('.sec07 .cont_2 .title',{y: '15.63vw'},{y: '0',ease: 'none',duration: 5},3)
+.fromTo('.sec07 .cont_2 .infoBox',{y: '15.63vw'},{y: '0',ease: 'none',duration: 5},3)
+
+.fromTo('#header .header_wrap .logo',{color:'#F8F8F4'},{color:'#000000',ease: 'none',duration: 0.1},5)
+.fromTo('#header .header_wrap .menu_btn span',{backgroundColor:'#F8F8F4'},{backgroundColor:'#000000',ease: 'none',duration: 0.1},5)
+
+gsap.to('.sec07 .cont_2 .emoji_1', {x: '-0.52vw',y: '-0.52vw',ease: 'none',repeat: -1,yoyo: true,duration: 1,ease: 'none',repeatDelay: 2});
+gsap.to('.sec07 .cont_2 .emoji_3', {x: '0.52vw',y: '0.52vw',ease: 'none',repeat: -1,yoyo: true,duration: 1,ease: 'none',repeatDelay: 2});
+gsap.to('.sec07 .cont_2 .enter', {opacity: 0,repeat: -1,yoyo: true,duration: 0.5,ease: 'none',repeatDelay: 1});
 
 
 
